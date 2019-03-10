@@ -16,7 +16,7 @@
     <div class="page-content">
         <div class="header">
             <h2>
-                Modelos - <small>Editar Categoria {{ $data->name }}</small>
+                Blog - <small>Editar Categoria {{ $data->name }}</small>
             </h2>
 
             <div class="breadcrumb-wrapper">

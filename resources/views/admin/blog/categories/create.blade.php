@@ -19,7 +19,7 @@
     <div class="page-content">
         <div class="header">
             <h2>
-                Modelos - <small>Criar Nova Categoria</small>
+                Blog - <small>Criar Nova Categoria</small>
             </h2>
 
             <div class="breadcrumb-wrapper">
