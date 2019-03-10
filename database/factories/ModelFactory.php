@@ -11,7 +11,7 @@
 |
 */
 
-$factory->define(FRD\User::class, function (Faker\Generator $faker) {
+$factory->define(FRD\Entities\User::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->safeEmail,

@@ -19,7 +19,7 @@ class CreateBlogPostsTable extends Migration
             $table->string('caption')->nullable();
             $table->boolean('featured')->default(0);
             $table->boolean('status')->default(0);
-            $table->string('author', 150)->default('Mega Model Vitória');
+            $table->string('author', 150)->default('Batagliesi');
             $table->string('description')->nullable();
             $table->string('keywords')->nullable();
             $table->text('html_content')->nullable();

@@ -25,7 +25,7 @@ class BlogPostServiceAdm implements BlogPostService
     public function store(array $data)
     {
         try {
-            $data['slug'] = $this->sanitizeString($data['name']);
+            $data['slug'] = $this->sanitizeString($data['title']);
             (isset($data['status'])) ? null : $data['status'] = 0;
             (isset($data['featured'])) ? null : $data['featured'] = 0;
 
@@ -68,7 +68,7 @@ class BlogPostServiceAdm implements BlogPostService
     {
         try {
             $entity =  $this->repository->find($id);
-            $data['slug'] = $this->sanitizeString($data['name']);
+            $data['slug'] = $this->sanitizeString($data['title']);
             (isset($data['status'])) ? null : $data['status'] = 0;
             (isset($data['featured'])) ? null : $data['featured'] = 0;
 

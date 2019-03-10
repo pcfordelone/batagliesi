@@ -71,7 +71,7 @@ class BlogPostController extends Controller
         $data = $this->repository->find($id);
         $categories = $this->blog_category_repository->lists('name', 'id')->toArray();
 
-        return view('admin.blog.posts.index', compact('data', 'categories'));
+        return view('admin.blog.posts.edit', compact('data', 'categories'));
     }
 
     /**
