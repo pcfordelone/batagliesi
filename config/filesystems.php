@@ -53,6 +53,11 @@ return [
             'root'   => public_path() . '/uploads/blog',
         ],
 
+        'public_banners' => [
+            'driver' => 'local',
+            'root'   => public_path() . '/uploads/banners',
+        ],
+
         'ftp' => [
             'driver'   => 'ftp',
             'host'     => 'ftp.example.com',

@@ -24,10 +24,10 @@ class HomeBannerServiceAdm implements HomeBannerService
         try {
             (isset($data['status'])) ? null : $data['status'] = 0;
 
-            if(isset($data['default_img'])) {
-                $image = uniqid('default_img') . '.' . $data['default_img']->getClientOriginalExtension();
-                Storage::disk('public_banners')->put($image, File::get($data['default_img']));
-                $data['default_img'] = $image;
+            if (isset($data['url'])) {
+                $image = uniqid('banner') . '.' . $data['url']->getClientOriginalExtension();
+                Storage::disk('public_banners')->put($image, File::get($data['url']));
+                $data['url'] = $image;
             }
 
             $entity =  $this->repository->create($data);
@@ -48,13 +48,13 @@ class HomeBannerServiceAdm implements HomeBannerService
             $entity =  $this->repository->find($id);
             (isset($data['status'])) ? null : $data['status'] = 0;
 
-            if (isset($data['default_img'])) {
+            if (isset($data['url'])) {
                 if ($entity->default_img != "") {
                     Storage::disk('public_banners')->delete($entity->default_img);
                 }
-                $image = uniqid('default_img') . '.' . $data['default_img']->getClientOriginalExtension();
-                Storage::disk('public_banners')->put($image, File::get($data['default_img']));
-                $data['default_img'] = $image;
+                $image = uniqid('banner') . '.' . $data['url']->getClientOriginalExtension();
+                Storage::disk('public_banners')->put($image, File::get($data['url']));
+                $data['url'] = $image;
             }
 
             $entity =  $this->repository->update($data, $id);

@@ -29,7 +29,7 @@ class Project extends Model
 
     public function getTagListAttribute()
     {
-        $tags = $this->blog_tags->lists('name')->toArray();
+        $tags = $this->project_tags->lists('name')->toArray();
 
         return implode(',', $tags);
     }

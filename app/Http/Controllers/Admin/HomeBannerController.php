@@ -39,7 +39,9 @@ class HomeBannerController extends Controller
      */
     public function create()
     {
-        return view('admin.home_banners.create');
+        $order = count($this->repository->all());
+
+        return view('admin.home_banners.create', compact('order'));
     }
 
     /**
