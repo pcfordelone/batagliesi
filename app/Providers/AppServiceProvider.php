@@ -18,6 +18,8 @@ use FRD\Interfaces\ProjectImageRepository;
 use FRD\Interfaces\ProjectRepository;
 use FRD\Interfaces\ProjectService;
 use FRD\Interfaces\ProjectTagRepository;
+use FRD\Interfaces\UserRepository;
+use FRD\Interfaces\UserService;
 use FRD\Repositories\AwardImageRepositoryEloquent;
 use FRD\Repositories\AwardRepositoryEloquent;
 use FRD\Repositories\BlogCategoryRepositoryEloquent;
@@ -28,12 +30,14 @@ use FRD\Repositories\ProjectCategoryRepositoryEloquent;
 use FRD\Repositories\ProjectImageRepositoryEloquent;
 use FRD\Repositories\ProjectRepositoryEloquent;
 use FRD\Repositories\ProjectTagRepositoryEloquent;
+use FRD\Repositories\UserRepositoryEloquent;
 use FRD\Services\AwardServiceAdm;
 use FRD\Services\BlogCategoryServiceAdm;
 use FRD\Services\BlogPostServiceAdm;
 use FRD\Services\HomeBannerServiceAdm;
 use FRD\Services\ProjectCategoryServiceAdm;
 use FRD\Services\ProjectServiceAdm;
+use FRD\Services\UserServiceAdm;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -65,6 +69,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(ProjectCategoryRepository::class, ProjectCategoryRepositoryEloquent::class);
         $this->app->bind(ProjectImageRepository::class, ProjectImageRepositoryEloquent::class);
         $this->app->bind(ProjectTagRepository::class, ProjectTagRepositoryEloquent::class);
+        $this->app->bind(UserRepository::class, UserRepositoryEloquent::class);
 
         $this->app->bind(AwardService::class, AwardServiceAdm::class);
         $this->app->bind(BlogCategoryService::class, BlogCategoryServiceAdm::class);
@@ -72,5 +77,6 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(HomeBannerService::class, HomeBannerServiceAdm::class);
         $this->app->bind(ProjectService::class, ProjectServiceAdm::class);
         $this->app->bind(ProjectCategoryService::class, ProjectCategoryServiceAdm::class);
+        $this->app->bind(UserService::class, UserServiceAdm::class);
     }
 }

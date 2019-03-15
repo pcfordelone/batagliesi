@@ -5,10 +5,11 @@ namespace FRD\Services;
 
 
 use FRD\Interfaces\UserRepository;
+use FRD\Interfaces\UserService;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 
-class UserServiceAdm
+class UserServiceAdm implements UserService
 {
     private $repository;
 

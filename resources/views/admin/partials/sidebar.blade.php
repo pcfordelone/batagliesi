@@ -28,12 +28,35 @@
                 </ul>
             </li>
             <li class="tm nav-parent">
+                <a href="#"><i class="fa fa-file-image-o"></i><span>Banner Principal</span> <span class="fa arrow"></span></a>
+                <ul class="children collapse">
+                    <li><a href="{{ route('admin.home_banners.index') }}">Banners Cadastrados</a></li>
+                    <li><a href="{{ route('admin.home_banners.create') }}">Novo Banner</a></li>
+                </ul>
+            </li>
+            <li class="tm nav-parent">
                 <a href="#"><i class="fa fa-newspaper-o"></i><span>Blog</span> <span class="fa arrow"></span></a>
                 <ul class="children collapse">
                     <li><a href="{{ route('admin.blog.categories.index') }}">Categorias Cadastradas</a></li>
                     <li><a href="{{ route('admin.blog.categories.create') }}">Nova Categoria</a></li>
                     <li><a href="{{ route('admin.blog.posts.index') }}">Posts Cadastrados</a></li>
                     <li><a href="{{ route('admin.blog.posts.create') }}">Novo Post</a></li>
+                </ul>
+            </li>
+            <li class="tm nav-parent">
+                <a href="#"><i class="fa fa-gift"></i><span>Premiações</span> <span class="fa arrow"></span></a>
+                <ul class="children collapse">
+                    <li><a href="{{ route('admin.awards.index') }}">Premiações Cadastradas</a></li>
+                    <li><a href="{{ route('admin.awards.create') }}">Nova Premiação</a></li>
+                </ul>
+            </li>
+            <li class="tm nav-parent">
+                <a href="#"><i class="fa fa-folder-open-o"></i><span>Projetos</span> <span class="fa arrow"></span></a>
+                <ul class="children collapse">
+                    <li><a href="{{ route('admin.projects.categories.index') }}">Categorias Cadastradas</a></li>
+                    <li><a href="{{ route('admin.projects.categories.create') }}">Nova Categoria</a></li>
+                    <li><a href="{{ route('admin.projects.index') }}">Projetos Cadastrados</a></li>
+                    <li><a href="{{ route('admin.projects.create') }}">Novo Projeto</a></li>
                 </ul>
             </li>
         </ul>

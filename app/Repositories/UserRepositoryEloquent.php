@@ -9,7 +9,15 @@
 namespace FRD\Repositories;
 
 
-class UserRepositoryEloquent
+use FRD\Entities\User;
+use FRD\Interfaces\UserRepository;
+use Prettus\Repository\Eloquent\BaseRepository;
+
+class UserRepositoryEloquent extends BaseRepository implements UserRepository
 {
+    public function model()
+    {
+        return User::class;
+    }
 
 }
