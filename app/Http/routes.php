@@ -1,5 +1,7 @@
 <?php
 
+
+/* Auth --------------------------------------------------------------------------------- */
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
 Route::get('auth/logout', ['as' => 'auth.logout', 'uses' => 'Auth\AuthController@getLogout']);
@@ -104,3 +106,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     });
 
 });
+
+/* Site --------------------------------------------------------------------------------- */
+Route::get('', ['as' => 'site.index', 'uses' => 'Site\MainController@index']);
