@@ -1,0 +1,11 @@
+/* Add here all your CSS customizations */
+.dropdown-item {
+    border: 1px solid black;
+}
+.nav-pills li {
+    margin-left: 10px !important;
+}
+.header-nav-main {
+    align-items: flex-end !important;
+    padding-top: 100px;
+}
