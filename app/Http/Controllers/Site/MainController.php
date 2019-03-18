@@ -13,4 +13,9 @@ class MainController extends Controller
     {
         return view('site.index');
     }
+
+    public function about()
+    {
+        return view('site.about');
+    }
 }

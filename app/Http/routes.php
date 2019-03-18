@@ -109,3 +109,4 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 
 /* Site --------------------------------------------------------------------------------- */
 Route::get('', ['as' => 'site.index', 'uses' => 'Site\MainController@index']);
+Route::get('perfil', ['as' => 'site.about', 'uses' => 'Site\MainController@about']);

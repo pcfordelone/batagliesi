@@ -49,6 +49,7 @@
 
     <!-- Skin CSS -->
     <link rel="stylesheet" href="css/skins/default.css">
+    <link rel="stylesheet" href="css/skins/batagliesi.css">
 
     <!-- Theme Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
