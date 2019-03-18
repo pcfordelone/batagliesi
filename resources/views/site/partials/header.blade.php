@@ -12,6 +12,7 @@
                                         <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Arquitetura e Urbanismo</a></li>
                                         <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Sistemas Ambientais</a></li>
                                         <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Design</a></li>
+                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Publicações</a></li>
                                         <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Contato</a></li>
                                     </ul>
                                 </nav>

@@ -110,3 +110,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 /* Site --------------------------------------------------------------------------------- */
 Route::get('', ['as' => 'site.index', 'uses' => 'Site\MainController@index']);
 Route::get('perfil', ['as' => 'site.about', 'uses' => 'Site\MainController@about']);
+Route::get('contato', ['as' => 'site.contact', 'uses' => 'Site\MainController@contact']);
+
+Route::group(['prefix' => 'projetos'], function() {
+    Route::get('', ['as' => 'site.projects.index', 'uses' => 'Site\MainController@projects_index']);
+    /*Route::get('categoria/{slug}', ['as' => 'site.projects.index', 'uses' => 'Site\MainController@projects_index']);*/
+    Route::get('detalhe', ['as' => 'site.projects.detail', 'uses' => 'Site\MainController@projects_detail']);
+});
