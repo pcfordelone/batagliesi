@@ -8,12 +8,12 @@
                             <div class="header-nav-main header-nav-main-square header-nav-main-effect-1 header-nav-main-sub-effect-1">
                                 <nav class="collapse">
                                     <ul class="nav nav-pills" id="mainNav">
-                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Perfil</a></li>
-                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Arquitetura e Urbanismo</a></li>
-                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Sistemas Ambientais</a></li>
-                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Design</a></li>
+                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="{{ route('site.about') }}">Perfil</a></li>
+                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="{{ route('site.projects.index') }}">Arquitetura e Urbanismo</a></li>
+                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="{{ route('site.projects.index') }}">Sistemas Ambientais</a></li>
+                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="{{ route('site.projects.index') }}">Design</a></li>
                                         <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Publicações</a></li>
-                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Contato</a></li>
+                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="{{ route('site.contact') }}">Contato</a></li>
                                     </ul>
                                 </nav>
                             </div>
