@@ -8,12 +8,12 @@
                             <div class="header-nav-main header-nav-main-square header-nav-main-effect-1 header-nav-main-sub-effect-1">
                                 <nav class="collapse">
                                     <ul class="nav nav-pills" id="mainNav">
-                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="{{ route('site.about') }}">Perfil</a></li>
-                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="{{ route('site.projects.index') }}">Arquitetura e Urbanismo</a></li>
-                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="{{ route('site.projects.index') }}">Sistemas Ambientais</a></li>
-                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="{{ route('site.projects.index') }}">Design</a></li>
-                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Publicações</a></li>
-                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="{{ route('site.contact') }}">Contato</a></li>
+                                        <li class="btn-custom"><a class="dropdown-item" style="background: #026b6d; color: #ffffff;" href="{{ route('site.about') }}">Perfil</a></li>
+                                        <li class="btn-custom"><a class="dropdown-item" style="background: #e6d905; color: #000000;" href="{{ route('site.projects.index') }}">Arquitetura</a></li>
+                                        <li class="btn-custom"><a class="dropdown-item" style="background: #054fe6; color: #ffffff;" href="{{ route('site.projects.index') }}">Sistemas Ambientais</a></li>
+                                        <li class="btn-custom"><a class="dropdown-item" style="background: red; color: #ffffff;" href="{{ route('site.projects.index') }}">Design</a></li>
+                                        <li><a class="dropdown-item" href="#">Publicações</a></li>
+                                        <li><a class="dropdown-item" href="{{ route('site.contact') }}">Contato</a></li>
                                     </ul>
                                 </nav>
                             </div>

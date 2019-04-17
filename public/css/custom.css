@@ -1,6 +1,19 @@
 /* Add here all your CSS customizations */
+
+body {
+    font-family: Arial, "Open Sans", sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Arial Narrow", Arial, "Open Sans", sans-serif !important;
+}
+
 .dropdown-item {
     border: 1px solid black;
+}
+.btn-custom:hover {
+    box-shadow: none !important;
+    background: #ffffff !important;
 }
 .nav-pills li {
     margin-left: 10px !important;
@@ -8,4 +21,10 @@
 .header-nav-main {
     align-items: flex-end !important;
     padding-top: 100px;
+}
+
+.nav-pills .btn-custom a:hover {
+    background: #ffffff !important;
+    color: #000000 !important;
+    box-shadow: none !important;
 }
