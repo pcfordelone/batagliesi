@@ -68,89 +68,40 @@
                 </div>
             </div>
             <div class="row recent-posts pb-5 mb-4">
-                <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-                    <article>
-                        <div class="row">
-                            <div class="col-md-12 mb-3">
-                                <img width="100%" src="/images/blog01.jpg" alt="" />
-                            </div>
-                            <div class="col-auto pr-0">
-                                <div class="date">
-                                    <span class="day text-color-dark font-weight-extra-bold">15</span>
-                                    <span class="month text-1">JAN</span>
+                @foreach($posts as $key => $post)
+                    @if ($key < 4)
+                        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+                            <article>
+                                <div class="row">
+                                    <div class="col-md-12 mb-3">
+                                        @if ($post->default_img == '')
+                                            <img src="/images/blog-default_img.jpg" width="100%" alt="{{ $post->title }}" />
+                                        @else
+                                            <img src="/uploads/blog/{{ $post->default_img }}" width="100%" alt="{{ $post->title }}" />
+                                        @endif
+                                    </div>
+                                    <div class="col-auto pr-0">
+                                        <div class="date">
+                                            <span class="day text-color-dark font-weight-extra-bold">{{ Date::parse($post->created_at)->format('d') }}</span>
+                                            <span class="month text-1">{{ Date::parse($post->created_at)->format('M') }}</span>
+                                        </div>
+                                    </div>
+                                    <div class="col pl-1">
+                                        <h4 class="line-height-3 text-4">
+                                            <a href="{{ route('site.blog.post', ['slug' => $post->slug]) }}" class="text-color-light">
+                                                {{ $post->title }}
+                                            </a>
+                                        </h4>
+                                        <p class="line-height-5 pr-4 mb-1">
+                                            {!! str_limit(strip_tags($post->html_content), $limit = 100, $end = ' ...') !!}
+                                        </p>
+                                        <a href="{{ route('site.blog.post', ['slug' => $post->slug]) }}" class="read-more text-color-light font-weight-bold text-2">Leia Mais <i class="fas fa-chevron-right text-1 ml-1"></i></a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col pl-1">
-                                <h4 class="line-height-3 text-4"><a href="#" class="text-color-light">Lorem ipsum dolor sit amet, consectetur</a></h4>
-                                <p class="line-height-5 pr-4 mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                <a href="/" class="read-more text-color-light font-weight-bold text-2">Leia Mais <i class="fas fa-chevron-right text-1 ml-1"></i></a>
-                            </div>
+                            </article>
                         </div>
-                    </article>
-                </div>
-
-                <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-                    <article>
-                        <div class="row">
-                            <div class="col-md-12 mb-3">
-                                <img width="100%" src="/images/blog02.jpg" alt="" />
-                            </div>
-                            <div class="col-auto pr-0">
-                                <div class="date">
-                                    <span class="day text-color-dark font-weight-extra-bold">15</span>
-                                    <span class="month text-1">JAN</span>
-                                </div>
-                            </div>
-                            <div class="col pl-1">
-                                <h4 class="line-height-3 text-4"><a href="#" class="text-color-light">Lorem ipsum dolor sit amet, consectetur</a></h4>
-                                <p class="line-height-5 pr-4 mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                <a href="/" class="read-more text-color-light font-weight-bold text-2">Leia Mais <i class="fas fa-chevron-right text-1 ml-1"></i></a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-                    <article>
-                        <div class="row">
-                            <div class="col-md-12 mb-3">
-                                <img width="100%" src="/images/blog03.jpg" alt="" />
-                            </div>
-                            <div class="col-auto pr-0">
-                                <div class="date">
-                                    <span class="day text-color-dark font-weight-extra-bold">15</span>
-                                    <span class="month text-1">JAN</span>
-                                </div>
-                            </div>
-                            <div class="col pl-1">
-                                <h4 class="line-height-3 text-4"><a href="#" class="text-color-light">Lorem ipsum dolor sit amet, consectetur</a></h4>
-                                <p class="line-height-5 pr-4 mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                <a href="/" class="read-more text-color-light font-weight-bold text-2">Leia Mais <i class="fas fa-chevron-right text-1 ml-1"></i></a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-                    <article>
-                        <div class="row">
-                            <div class="col-md-12 mb-3">
-                                <img width="100%" src="/images/blog04.jpg" alt="" />
-                            </div>
-                            <div class="col-auto pr-0">
-                                <div class="date">
-                                    <span class="day text-color-dark font-weight-extra-bold">15</span>
-                                    <span class="month text-1">JAN</span>
-                                </div>
-                            </div>
-                            <div class="col pl-1">
-                                <h4 class="line-height-3 text-4"><a href="#" class="text-color-light">Lorem ipsum dolor sit amet, consectetur</a></h4>
-                                <p class="line-height-5 pr-4 mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                <a href="/" class="read-more text-color-light font-weight-bold text-2">Leia Mais <i class="fas fa-chevron-right text-1 ml-1"></i></a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
+                    @endif
+                @endforeach
             </div>
         </div>
     </section>
