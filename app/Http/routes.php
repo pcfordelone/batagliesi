@@ -112,8 +112,17 @@ Route::get('', ['as' => 'site.index', 'uses' => 'Site\MainController@index']);
 Route::get('perfil', ['as' => 'site.about', 'uses' => 'Site\MainController@about']);
 Route::get('contato', ['as' => 'site.contact', 'uses' => 'Site\MainController@contact']);
 
+/* Projetos */
 Route::group(['prefix' => 'projetos'], function() {
     Route::get('', ['as' => 'site.projects.index', 'uses' => 'Site\MainController@projects_index']);
     /*Route::get('categoria/{slug}', ['as' => 'site.projects.index', 'uses' => 'Site\MainController@projects_index']);*/
     Route::get('detalhe', ['as' => 'site.projects.detail', 'uses' => 'Site\MainController@projects_detail']);
+});
+
+/* Blog */
+Route::group(['prefix' => 'publicacoes'], function() {
+    Route::get('', ['as' => 'site.blog.index', 'uses' => 'Site\BlogController@index']);
+    Route::get('busca', ['as' => 'site.blog.search', 'uses' => 'Site\BlogController@search']);
+    Route::get('categoria/{slug}', ['as' => 'site.blog.category', 'uses' => 'Site\BlogController@category']);
+    Route::get('post/{slug}', ['as' => 'site.blog.post', 'uses' => 'Site\BlogController@post']);
 });
