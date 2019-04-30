@@ -1,57 +1,39 @@
 @extends('site.layout')
 
 @section('content')
-    <section class="section section-height-3 border-0 mt-0">
-        <div class="container container-lg">
-            <div class="row align-items-center">
-                <div class="col-lg-8 fluid-col-lg-8" style="min-height: 33vw;">
-                    <div class="fluid-col fluid-col-left">
-                        <img src="/images/projects/project_detail01.jpg" width="100%" style="min-width: 100%" class="img-fluid" alt="" />
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="pr-5">
-                        <span class="d-block font-weight-light negative-ls-1 text-5 mb-1"><em class="text-2 opacity-8">This is a</em></span>
-                        <h2 class="font-weight-extra-bold text-color-dark negative-ls-3 line-height-1 text-7 mb-3"><em>LEFT BIG IMAGE SECTION</em></h2>
-                        <span class="d-block alternative-font text-color-primay text-5 mb-4 pb-2">Enjoy the power</span>
-                        <p class="lead mb-4 pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec finibus orci, id luctus est. Phasellus tristique libero id rhoncus tincidunt. Aliquam luctus.</p>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <ul class="list list-icons list-style-none text-4 pl-none mb-2 pb-2 pr-3">
-                                    <li class="text-1 text-color-primary mb-3"><i class="fa fa-check text-primary text-4 mr-1"></i> HTML5+JS+CSS+SCSS</li>
-                                    <li class="text-1 text-color-primary mb-3"><i class="fa fa-check text-primary text-4 mr-1"></i> Wide &amp; Boxed</li>
-                                    <li class="text-1 text-color-primary mb-3"><i class="fa fa-check text-primary text-4 mr-1"></i> Dark &amp; Light</li>
-                                    <li class="text-1 text-color-primary mb-0 mb-md-3"><i class="fa fa-check text-primary text-4 mr-1"></i> RTL Support</li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <ul class="list list-icons list-style-none text-4 pl-none mb-2 pb-2 pr-3">
-                                    <li class="text-1 text-color-primary mb-3"><i class="fa fa-check text-primary text-4 mr-1"></i> Bootstrap 4+</li>
-                                    <li class="text-1 text-color-primary mb-3"><i class="fa fa-check text-primary text-4 mr-1"></i> SEO Optimized</li>
-                                    <li class="text-1 text-color-primary mb-3"><i class="fa fa-check text-primary text-4 mr-1"></i> Blog Pages</li>
-                                    <li class="text-1 text-color-primary mb-3"><i class="fa fa-check text-primary text-4 mr-1"></i> Shop Pages</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section section-height-3 border-0 mt-0">
-        <div class="container container-lg">
-            <div class="row align-items-center">
-                <div class="col-lg-8 fluid-col-lg-8" style="min-height: 33vw;">
-                    <div class="fluid-col fluid-col-left">
-                        <img src="/images/projects/project_detail01.jpg" style="width: 100%;" class="img-fluid" alt="" />
-                    </div>
-                </div>
-                <div class="col-lg-4 background-color-dark">
-                    <div class="pr-5">
 
-                    </div>
-                </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8 m-0 p-0">
+                <img src="/images/projects/project_detail01.png" class="m-0 p-0 img-fluid" width="100%" alt="" />
+            </div>
+            <div class="col-lg-4 m-0 p-5 bg-color-dark-scale-9">
+                <h2 class="text-color-light">Citibank Barra</h2>
+                <p class="text-light opacity-7 text-md-4">
+                    <strong>Cliente: </strong> Citibank<br/>
+                    <strong>Data: </strong> 2015<br/>
+                </p>
             </div>
         </div>
-    </section>
+    </div>
+
+
+    <div class="lightbox mb-0 pb-0" data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}, 'mainClass': 'mfp-with-zoom', 'zoom': {'enabled': true, 'duration': 300}}">
+        <div class="owl-carousel owl-theme full-width" data-plugin-options="{'items': 5, 'loop': false, 'nav': true, 'dots': false}">
+            @for($i = 0; $i < 8; $i++)
+                <div>
+                    <a href="/img/projects/project.jpg">
+                        <span class="thumb-info thumb-info-centered-info thumb-info-no-borders">
+                            <span class="thumb-info-wrapper">
+                                <img src="/img/projects/project.jpg" class="img-fluid" alt="">
+                                <span class="thumb-info-action">
+                                    <span class="thumb-info-action-icon"><i class="fas fa-plus"></i></span>
+                                </span>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+            @endfor
+        </div>
+    </div>
 @stop

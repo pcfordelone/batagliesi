@@ -12,7 +12,7 @@
                                         <li class="btn-custom"><a class="dropdown-item" style="background: #e6d905; color: #000000;" href="{{ route('site.projects.index') }}">Arquitetura</a></li>
                                         <li class="btn-custom"><a class="dropdown-item" style="background: #054fe6; color: #ffffff;" href="{{ route('site.projects.index') }}">Sistemas Ambientais</a></li>
                                         <li class="btn-custom"><a class="dropdown-item" style="background: red; color: #ffffff;" href="{{ route('site.projects.index') }}">Design</a></li>
-                                        <li><a class="dropdown-item" href="#">Publicações</a></li>
+                                        <li><a class="dropdown-item" href="{{ route('site.blog.index') }}">Publicações</a></li>
                                         <li><a class="dropdown-item" href="{{ route('site.contact') }}">Contato</a></li>
                                     </ul>
                                 </nav>

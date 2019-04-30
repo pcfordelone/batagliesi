@@ -21,7 +21,7 @@
 
 				<div class="col-md-6 col-lg-1-5 isotope-item urbanismo">
                     <div class="portfolio-item">
-                        <a href="">
+                        <a href="{{ route('site.projects.detail') }}">
 							<span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0 m-0">
 								<span class="thumb-info-wrapper border-radius-0">
 									<img src="/images/projects/project01.jpg" class="img-fluid border-radius-0" alt="">
@@ -40,7 +40,7 @@
                 </div>
 				<div class="col-md-6 col-lg-1-5 isotope-item urbanismo">
 					<div class="portfolio-item">
-						<a href="">
+						<a href="{{ route('site.projects.detail') }}">
 							<span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0 m-0">
 								<span class="thumb-info-wrapper border-radius-0">
 									<img src="/images/projects/project02.jpg" class="img-fluid border-radius-0" alt="">
@@ -59,7 +59,7 @@
 				</div>
 				<div class="col-md-6 col-lg-1-5 isotope-item interiores">
 					<div class="portfolio-item">
-						<a href="">
+						<a href="{{ route('site.projects.detail') }}">
 							<span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0 m-0">
 								<span class="thumb-info-wrapper border-radius-0">
 									<img src="/images/projects/project03.jpg" class="img-fluid border-radius-0" alt="">
@@ -78,7 +78,7 @@
 				</div>
 				<div class="col-md-6 col-lg-1-5 isotope-item arquitetura">
 					<div class="portfolio-item">
-						<a href="">
+						<a href="{{ route('site.projects.detail') }}">
 							<span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0 m-0">
 								<span class="thumb-info-wrapper border-radius-0">
 									<img src="/images/projects/project04.jpg" class="img-fluid border-radius-0" alt="">
@@ -97,7 +97,7 @@
 				</div>
 				<div class="col-md-6 col-lg-1-5 isotope-item arquitetura">
 					<div class="portfolio-item">
-						<a href="">
+						<a href="{{ route('site.projects.detail') }}">
 							<span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0 m-0">
 								<span class="thumb-info-wrapper border-radius-0">
 									<img src="/images/projects/project05.jpg" class="img-fluid border-radius-0" alt="">
@@ -116,7 +116,7 @@
 				</div>
 				<div class="col-md-6 col-lg-1-5 isotope-item educacional">
 					<div class="portfolio-item">
-						<a href="">
+						<a href="{{ route('site.projects.detail') }}">
 							<span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0 m-0">
 								<span class="thumb-info-wrapper border-radius-0">
 									<img src="/images/projects/project06.jpg" class="img-fluid border-radius-0" alt="">
@@ -135,7 +135,7 @@
 				</div>
 				<div class="col-md-6 col-lg-1-5 isotope-item urbanismo">
 					<div class="portfolio-item">
-						<a href="">
+						<a href="{{ route('site.projects.detail') }}">
 							<span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0 m-0">
 								<span class="thumb-info-wrapper border-radius-0">
 									<img src="/images/projects/project01.jpg" class="img-fluid border-radius-0" alt="">
@@ -154,7 +154,7 @@
 				</div>
 				<div class="col-md-6 col-lg-1-5 isotope-item urbanismo">
 					<div class="portfolio-item">
-						<a href="">
+						<a href="{{ route('site.projects.detail') }}">
 							<span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0 m-0">
 								<span class="thumb-info-wrapper border-radius-0">
 									<img src="/images/projects/project02.jpg" class="img-fluid border-radius-0" alt="">
@@ -173,7 +173,7 @@
 				</div>
 				<div class="col-md-6 col-lg-1-5 isotope-item interiores">
 					<div class="portfolio-item">
-						<a href="">
+						<a href="{{ route('site.projects.detail') }}">
 							<span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0 m-0">
 								<span class="thumb-info-wrapper border-radius-0">
 									<img src="/images/projects/project03.jpg" class="img-fluid border-radius-0" alt="">
@@ -192,7 +192,7 @@
 				</div>
 				<div class="col-md-6 col-lg-1-5 isotope-item arquitetura">
 					<div class="portfolio-item">
-						<a href="">
+						<a href="{{ route('site.projects.detail') }}">
 							<span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0 m-0">
 								<span class="thumb-info-wrapper border-radius-0">
 									<img src="/images/projects/project04.jpg" class="img-fluid border-radius-0" alt="">
@@ -211,7 +211,7 @@
 				</div>
 				<div class="col-md-6 col-lg-1-5 isotope-item arquitetura">
 					<div class="portfolio-item">
-						<a href="">
+						<a href="{{ route('site.projects.detail') }}">
 							<span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0 m-0">
 								<span class="thumb-info-wrapper border-radius-0">
 									<img src="/images/projects/project05.jpg" class="img-fluid border-radius-0" alt="">
@@ -230,7 +230,7 @@
 				</div>
 				<div class="col-md-6 col-lg-1-5 isotope-item educacional">
 					<div class="portfolio-item">
-						<a href="">
+						<a href="{{ route('site.projects.detail') }}">
 							<span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0 m-0">
 								<span class="thumb-info-wrapper border-radius-0">
 									<img src="/images/projects/project06.jpg" class="img-fluid border-radius-0" alt="">
@@ -249,7 +249,7 @@
 				</div>
 				<div class="col-md-6 col-lg-1-5 isotope-item urbanismo">
 					<div class="portfolio-item">
-						<a href="">
+						<a href="{{ route('site.projects.detail') }}">
 							<span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0 m-0">
 								<span class="thumb-info-wrapper border-radius-0">
 									<img src="/images/projects/project01.jpg" class="img-fluid border-radius-0" alt="">
@@ -268,7 +268,7 @@
 				</div>
 				<div class="col-md-6 col-lg-1-5 isotope-item urbanismo">
 					<div class="portfolio-item">
-						<a href="">
+						<a href="{{ route('site.projects.detail') }}">
 							<span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0 m-0">
 								<span class="thumb-info-wrapper border-radius-0">
 									<img src="/images/projects/project02.jpg" class="img-fluid border-radius-0" alt="">
@@ -287,7 +287,7 @@
 				</div>
 				<div class="col-md-6 col-lg-1-5 isotope-item interiores">
 					<div class="portfolio-item">
-						<a href="">
+						<a href="{{ route('site.projects.detail') }}">
 							<span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0 m-0">
 								<span class="thumb-info-wrapper border-radius-0">
 									<img src="/images/projects/project03.jpg" class="img-fluid border-radius-0" alt="">
@@ -306,7 +306,7 @@
 				</div>
 				<div class="col-md-6 col-lg-1-5 isotope-item arquitetura">
 					<div class="portfolio-item">
-						<a href="">
+						<a href="{{ route('site.projects.detail') }}">
 							<span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0 m-0">
 								<span class="thumb-info-wrapper border-radius-0">
 									<img src="/images/projects/project04.jpg" class="img-fluid border-radius-0" alt="">
@@ -325,7 +325,7 @@
 				</div>
 				<div class="col-md-6 col-lg-1-5 isotope-item arquitetura">
 					<div class="portfolio-item">
-						<a href="">
+						<a href="{{ route('site.projects.detail') }}">
 							<span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0 m-0">
 								<span class="thumb-info-wrapper border-radius-0">
 									<img src="/images/projects/project05.jpg" class="img-fluid border-radius-0" alt="">
@@ -344,7 +344,7 @@
 				</div>
 				<div class="col-md-6 col-lg-1-5 isotope-item educacional">
 					<div class="portfolio-item">
-						<a href="">
+						<a href="{{ route('site.projects.detail') }}">
 							<span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0 m-0">
 								<span class="thumb-info-wrapper border-radius-0">
 									<img src="/images/projects/project06.jpg" class="img-fluid border-radius-0" alt="">
