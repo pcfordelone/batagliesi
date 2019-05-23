@@ -8,12 +8,12 @@
                             <div class="header-nav-main header-nav-main-square header-nav-main-effect-1 header-nav-main-sub-effect-1">
                                 <nav class="collapse">
                                     <ul class="nav nav-pills" id="mainNav">
-                                        <li class="btn-custom"><a class="dropdown-item" style="background: #026b6d; color: #ffffff;" href="{{ route('site.about') }}">Perfil</a></li>
-                                        <li class="btn-custom"><a class="dropdown-item" style="background: #e6d905; color: #000000;" href="{{ route('site.projects.index') }}">Arquitetura</a></li>
-                                        <li class="btn-custom"><a class="dropdown-item" style="background: #054fe6; color: #ffffff;" href="{{ route('site.projects.index') }}">Sistemas Ambientais</a></li>
-                                        <li class="btn-custom"><a class="dropdown-item" style="background: red; color: #ffffff;" href="{{ route('site.projects.index') }}">Design</a></li>
-                                        <li><a class="dropdown-item" href="{{ route('site.blog.index') }}">Publicações</a></li>
-                                        <li><a class="dropdown-item" href="{{ route('site.contact') }}">Contato</a></li>
+                                        <li><a class="dropdown-item btn-custom btn-custom-green" href="{{ route('site.about') }}">Perfil</a></li>
+                                        <li><a class="dropdown-item btn-custom btn-custom-yellow" href="{{ route('site.projects.index') }}">Arquitetura</a></li>
+                                        <li><a class="dropdown-item btn-custom btn-custom-blue" href="{{ route('site.projects.index') }}">Sistemas Ambientais</a></li>
+                                        <li><a class="dropdown-item btn-custom btn-custom-red" href="{{ route('site.projects.index') }}">Design</a></li>
+                                        <li><a class="dropdown-item btn-custom" href="{{ route('site.blog.index') }}">Publicações</a></li>
+                                        <li><a class="dropdown-item btn-custom" href="{{ route('site.contact') }}">Contato</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -29,7 +29,6 @@
                         </a>
                         <p class="mt-2 mb-0 pb-0" style="line-height: 15px">
                             + 55 11 3813 1999<br/>
-                            contato@batagliesi.com.br
                         </p>
                     </div>
                 </div>

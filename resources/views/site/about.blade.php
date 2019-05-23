@@ -13,7 +13,7 @@
                         <div class="col">
                             <h2 class="font-weight-extra-bold text-color-light negative-ls-3 line-height-1 text-7 mb-3">Batagliesi</h2>
                             <span class="d-block text-color-light text-5 mb-4 pb-2">
-                                Arquitetos + Designers Consultores
+                                Arquitetos + Designers
                             </span>
                             <p class="text-3 mb-4 pb-2">
                                 A Batagliesi acredita que conhecimento – concepção e técnica, cumprimento das previsões de custos, cronogramas e postura ética são atributos fundamentais de uma atuação profissional. Oferecemos uma estrutura onde comprometimento, flexibilidade, disponibilidade, transparência e organização são condutas seguidas ao longo de nossa carreira.

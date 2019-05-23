@@ -1,6 +1,6 @@
 /* Add here all your CSS customizations */
 
-body {
+body, p, strong, span {
     font-family: Arial, "Open Sans", sans-serif !important;
 }
 
@@ -10,10 +10,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .dropdown-item {
     border: 1px solid black;
-}
-.btn-custom:hover {
-    box-shadow: none !important;
-    background: #ffffff !important;
 }
 .nav-pills li {
     margin-left: 10px !important;
@@ -27,4 +23,32 @@ h1, h2, h3, h4, h5, h6 {
     background: #ffffff !important;
     color: #000000 !important;
     box-shadow: none !important;
+}
+
+#footer .footer-copyright {
+    background: #0e6c70 !important;
+    border: none;
+}
+#footer .footer-copyright p {
+    color: #FFFFFF !important;
+    font-size: 14px;
+}
+
+.btn-custom {
+    border: 1px solid #e2e2e2;
+}
+.btn-custom:hover {
+    background: #9d9d9d !important;
+}
+.btn-custom-green:hover {
+    background: #0e6c70 !important;
+}
+.btn-custom-blue:hover {
+    background: #052349 !important;
+}
+.btn-custom-red:hover {
+    background: #b7222a !important;
+}
+.btn-custom-yellow:hover {
+    background: #d2d500 !important;
 }

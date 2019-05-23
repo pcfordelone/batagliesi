@@ -67,7 +67,7 @@
                         <li><i class="fas fa-map-marker-alt top-6"></i> <strong class="text-dark"></strong> R. Diogo Moreira, 149 - Pinheiros - São Paulo - SP</li>
                         <li><i class="fas fa-phone top-6"></i> <strong class="text-dark"></strong> +55 11 3813 1999</li>
                         <li><i class="fas fa-envelope top-6"></i> <strong class="text-dark"></strong> <a href="contato@batagliesi.com.br">contato@batagliesi.com.br</a></li>
-                        <li><i class="fas fa-envelope top-6"></i> <strong class="text-dark"></strong> <a href="curriculum@batagliesi.com.br">curriculim@batagliesi.com.br</a></li>
+                        <li><i class="fas fa-envelope top-6"></i> <strong class="text-dark"></strong> <a href="curriculo@batagliesi.com.br">curriculo@batagliesi.com.br</a></li>
                         <li><i class="fas fa-envelope top-6"></i> <strong class="text-dark"></strong> <a href="fornecedores@batagliesi.com.br">fornecedores@batagliesi.com.br</a></li>
                     </ul>
                 </div>
