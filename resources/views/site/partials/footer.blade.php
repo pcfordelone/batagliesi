@@ -9,7 +9,7 @@
                         <li class="social-icons-instagram"><a href="http://www.instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram fa-2x"></i></a></li>
                         <li class="social-icons-pinterest"><a href="http://www.pinterest.com/" target="_blank" title="Pinterest"><i class="fab fa-pinterest fa-2x"></i></a></li>
                     </ul>
-                    <p><strong>Batagliesi - Arquitetos + Designers Consultores</strong> - © Copyright 2019. Todos os direitos reservados.</p>
+                    <p><strong>Batagliesi - Arquitetos + Designers</strong> - © Copyright 2019. Todos os direitos reservados.</p>
                 </div>
             </div>
         </div>
