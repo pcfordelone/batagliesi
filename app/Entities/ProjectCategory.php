@@ -11,6 +11,7 @@ class ProjectCategory extends Model
         'name',
         'slug',
         'description',
+        'color'
     ];
 
     public function projects()

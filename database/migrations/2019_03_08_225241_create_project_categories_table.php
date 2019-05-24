@@ -18,6 +18,7 @@ class CreateProjectCategoriesTable extends Migration
             $table->string('name')->unique();
             $table->string('slug')->unique();
             $table->string('description')->nullable();
+            $table->string('color')->nullable();
             $table->timestamps();
         });
     }

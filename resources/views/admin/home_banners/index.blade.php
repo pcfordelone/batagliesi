@@ -88,7 +88,7 @@
 
                         <a href="{{ redirect()->back()->getTargetUrl() }}" class="btn btn-default" >VOLTAR</a>
                         <a href="{{ route('admin.home_banners.create') }}">
-                            <button class="btn btn-blue">NOVA PREMIAÇÃO</button>
+                            <button class="btn btn-blue">NOVO BANNER</button>
                         </a>
                     </div>
                 </div>

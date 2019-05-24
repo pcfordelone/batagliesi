@@ -26,7 +26,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #footer .footer-copyright {
-    background: #0e6c70 !important;
+    background: #00646b !important;
     border: none;
 }
 #footer .footer-copyright p {
@@ -41,14 +41,14 @@ h1, h2, h3, h4, h5, h6 {
     background: #9d9d9d !important;
 }
 .btn-custom-green:hover {
-    background: #0e6c70 !important;
+    background: #00646b !important;
+}
+.btn-custom-yellow:hover {
+    background: #d2d500 !important;
 }
 .btn-custom-blue:hover {
     background: #052349 !important;
 }
 .btn-custom-red:hover {
     background: #b7222a !important;
-}
-.btn-custom-yellow:hover {
-    background: #d2d500 !important;
 }

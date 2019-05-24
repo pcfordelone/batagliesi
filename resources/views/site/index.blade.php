@@ -5,22 +5,17 @@
     <div class="slider-container rev_slider_wrapper">
         <div id="revolutionSlider" class="slider rev_slider" data-version="5.4.8" data-plugin-revolution-slider data-plugin-options="{'delay': 9000, 'gridwidth': 1170, 'gridheight': 550, 'disableProgressBar': 'on', 'responsiveLevels': [4096,1200,992,500], 'parallax': { 'type': 'scroll', 'origo': 'enterpoint', 'speed': 1000, 'levels': [2,3,4,5,6,7,8,9,12,50], 'disable_onmobile': 'on' }, 'navigation' : {'arrows': { 'enable': true }, 'bullets': {'enable': true, 'style': 'bullets-style-1', 'h_align': 'center', 'v_align': 'bottom', 'space': 7, 'v_offset': 70, 'h_offset': 0}}}">
             <ul>
-                <li data-transition="fade">
-                    <img src="/images/banner01.jpg"
-                         alt=""
-                         data-bgposition="center center"
-                         data-bgfit="cover"
-                         data-bgrepeat="no-repeat"
-                         class="rev-slidebg">
-                </li>
-                <li data-transition="fade">
-                    <img src="/images/banner02.jpg"
-                         alt=""
-                         data-bgposition="center center"
-                         data-bgfit="cover"
-                         data-bgrepeat="no-repeat"
-                         class="rev-slidebg">
-                </li>
+                @foreach($banners as $banner)
+                    <li data-transition="fade">
+                        <img src="/uploads/banners/{{ $banner->url }}"
+                             alt="{{ $banner->alt }}"
+                             title="{{ $banner->title }}"
+                             data-bgposition="center center"
+                             data-bgfit="cover"
+                             data-bgrepeat="no-repeat"
+                             class="rev-slidebg">
+                    </li>
+                @endforeach
             </ul>
         </div>
     </div>

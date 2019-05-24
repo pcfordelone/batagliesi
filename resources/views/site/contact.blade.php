@@ -94,7 +94,7 @@
         // Map Markers
         var mapMarkers = [{
             address: "R. Diogo Moreira, 149 - Pinheiros - São Paulo - SP",
-            html: "<strong>Batagliesi - Arquitetos + Designers Consultores</strong><br>R. Diogo Moreira, 149 - Pinheiros - São Paulo - SP",
+            html: "<strong>Batagliesi - Arquitetos + Designers</strong><br>R. Diogo Moreira, 149 - Pinheiros - São Paulo - SP",
             icon: {
                 image: "/images/pin.png",
                 iconsize: [26, 46],

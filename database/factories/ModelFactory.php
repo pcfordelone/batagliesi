@@ -43,3 +43,13 @@ $factory->define(FRD\Entities\BlogPost::class, function (Faker\Generator $faker)
         'author' => 'Batagliesi Arquitetos + Designers'
     ];
 });
+
+$factory->define(FRD\Entities\ProjectCategory::class, function (Faker\Generator $faker) {
+    $name = $faker->word;
+    return [
+        'name' => $name,
+        'slug' => $name,
+        'status' => $faker->boolean(70),
+        'description' => $faker->paragraph(1)
+    ];
+});
