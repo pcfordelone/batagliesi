@@ -10,7 +10,7 @@
             <div class="col-lg-6">
 
                 <div class="overflow-hidden mb-1">
-                    <h2 class="font-weight-normal text-7 mt-2 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200"><strong class="font-weight-extra-bold">Contact</strong> Us</h2>
+                    <h2 class="font-weight-normal text-7 mt-2 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200"><strong class="font-weight-extra-bold">Fale</strong> Conosco</h2>
                 </div>
                 <div class="overflow-hidden mb-4 pb-3">
                     <p class="mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="400">Envie aqui sua mensagem que, em breve, entraremos em contato! Obrigado.</p>
@@ -62,7 +62,7 @@
             <div class="col-lg-6">
 
                 <div class="appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="800">
-                    <h4 class="mt-2 mb-1"><strong>Batagliesi - Arquitetos + Designers</strong></h4>
+                    <h4 class="mt-2 mb-1"><strong>Batagliesi - Arquitetos</strong></h4>
                     <ul class="list list-icons list-icons-style-2 mt-2">
                         <li><i class="fas fa-map-marker-alt top-6"></i> <strong class="text-dark"></strong> R. Diogo Moreira, 149 - Pinheiros - São Paulo - SP</li>
                         <li><i class="fas fa-phone top-6"></i> <strong class="text-dark"></strong> +55 11 3813 1999</li>

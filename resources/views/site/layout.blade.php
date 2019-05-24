@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Batagliesi - Arquitetos + Designers Consultores</title>
+    <title>Batagliesi - Arquitetos + Designers</title>
 
     <meta name="keywords" content="" />
     <meta name="description" content="">

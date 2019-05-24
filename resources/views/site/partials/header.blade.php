@@ -24,7 +24,7 @@
             <div class="header-column">
                 <div class="header-row">
                     <div class="header-logo ml-5">
-                        <a href="#">
+                        <a href="{{ route('site.index') }}">
                             <img alt="Batagliesi" width="250" data-sticky-width="82" data-sticky-height="40" src="/images/logotipo.png">
                         </a>
                         <p class="mt-2 mb-0 pb-0" style="line-height: 15px">
