@@ -18,4 +18,9 @@ class ProjectCategory extends Model
     {
         return $this->hasMany(Project::class);
     }
+
+    public function project_tags()
+    {
+        return $this->belongsToMany(ProjectTag::class);
+    }
 }

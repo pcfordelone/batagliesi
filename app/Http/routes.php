@@ -83,6 +83,16 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
             Route::get('delete/{id}', ['as' => 'admin.projects.categories.delete', 'uses' => 'Admin\ProjectCategoryController@destroy']);
             Route::get('change_status', ['as' => 'admin.projects.categories.change_status', 'uses' => 'Admin\ProjectCategoryController@changeStatus']);
         });
+
+        Route::group(['prefix' => 'sub-categorias'], function() {
+            Route::get('', ['as' => 'admin.projects.tags.index', 'uses' => 'Admin\ProjectTagController@index']);
+            Route::get('create', ['as' => 'admin.projects.tags.create', 'uses' => 'Admin\ProjectTagController@create']);
+            Route::post('create', ['as' => 'admin.projects.tags.store', 'uses' => 'Admin\ProjectTagController@store']);
+            Route::get('edit/{id}', ['as' => 'admin.projects.tags.edit', 'uses' => 'Admin\ProjectTagController@edit']);
+            Route::put('edit/{id}', ['as' => 'admin.projects.tags.update', 'uses' => 'Admin\ProjectTagController@update']);
+            Route::get('delete/{id}', ['as' => 'admin.projects.tags.delete', 'uses' => 'Admin\ProjectTagController@destroy']);
+            Route::get('change_status', ['as' => 'admin.projects.tags.change_status', 'uses' => 'Admin\ProjectTagController@changeStatus']);
+        });
     });
 
     /* Users ----------------------------------------------------------------------------------------------------------------------- */

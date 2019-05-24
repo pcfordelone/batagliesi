@@ -15,4 +15,9 @@ class ProjectTag extends Model
     {
         return $this->belongsToMany(Project::class);
     }
+
+    public function project_categories()
+    {
+        return $this->belongsToMany(ProjectCategory::class);
+    }
 }

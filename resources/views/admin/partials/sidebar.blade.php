@@ -55,6 +55,8 @@
                 <ul class="children collapse">
                     <li><a href="{{ route('admin.projects.categories.index') }}">Categorias Cadastradas</a></li>
                     <li><a href="{{ route('admin.projects.categories.create') }}">Nova Categoria</a></li>
+                    <li><a href="{{ route('admin.projects.tags.index') }}">Sub-categorias Cadastradas</a></li>
+                    <li><a href="{{ route('admin.projects.tags.create') }}">Nova Sub-categoria</a></li>
                     <li><a href="{{ route('admin.projects.index') }}">Projetos Cadastrados</a></li>
                     <li><a href="{{ route('admin.projects.create') }}">Novo Projeto</a></li>
                 </ul>

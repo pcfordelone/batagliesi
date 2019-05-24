@@ -18,6 +18,7 @@ use FRD\Interfaces\ProjectImageRepository;
 use FRD\Interfaces\ProjectRepository;
 use FRD\Interfaces\ProjectService;
 use FRD\Interfaces\ProjectTagRepository;
+use FRD\Interfaces\ProjectTagService;
 use FRD\Interfaces\UserRepository;
 use FRD\Interfaces\UserService;
 use FRD\Repositories\AwardImageRepositoryEloquent;
@@ -37,6 +38,7 @@ use FRD\Services\BlogPostServiceAdm;
 use FRD\Services\HomeBannerServiceAdm;
 use FRD\Services\ProjectCategoryServiceAdm;
 use FRD\Services\ProjectServiceAdm;
+use FRD\Services\ProjectTagServiceAdm;
 use FRD\Services\UserServiceAdm;
 use Illuminate\Support\ServiceProvider;
 
@@ -78,5 +80,6 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(ProjectService::class, ProjectServiceAdm::class);
         $this->app->bind(ProjectCategoryService::class, ProjectCategoryServiceAdm::class);
         $this->app->bind(UserService::class, UserServiceAdm::class);
+        $this->app->bind(ProjectTagService::class, ProjectTagServiceAdm::class);
     }
 }

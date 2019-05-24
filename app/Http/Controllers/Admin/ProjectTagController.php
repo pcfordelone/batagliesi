@@ -2,28 +2,22 @@
 
 namespace FRD\Http\Controllers\Admin;
 
-use FRD\Interfaces\ProjectCategoryRepository;
-use FRD\Interfaces\ProjectRepository;
-use FRD\Interfaces\ProjectService;
 use FRD\Interfaces\ProjectTagRepository;
+use FRD\Interfaces\ProjectTagService;
 use Illuminate\Http\Request;
 
 use FRD\Http\Requests;
 use FRD\Http\Controllers\Controller;
 
-class ProjectController extends Controller
+class ProjectTagController extends Controller
 {
     private $repository;
     private $service;
-    private $project_category_repository;
-    private $project_tag_repository;
 
-    public function __construct(ProjectRepository $repository, ProjectService $service, ProjectCategoryRepository $project_category_repository, ProjectTagRepository $projectTagRepository)
+    public function __construct(ProjectTagRepository $repository, ProjectTagService $service)
     {
         $this->repository = $repository;
         $this->service = $service;
-        $this->project_category_repository = $project_category_repository;
-        $this->project_tag_repository = $projectTagRepository;
     }
 
     /**
@@ -35,7 +29,7 @@ class ProjectController extends Controller
     {
         $data = $this->repository->all();
 
-        return view('admin.blog.posts.index', compact('data'));
+        return view('admin.projects.tags.index', compact('data'));
     }
 
     /**
@@ -45,10 +39,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        $categories = $this->project_category_repository->lists('name', 'id')->toArray();
-        $tags = $this->project_tag_repository->all();
-
-        return view('admin.blog.posts.create', compact('categories', 'tags'));
+        return view('admin.projects.tags.create');
     }
 
     /**
@@ -61,7 +52,7 @@ class ProjectController extends Controller
     {
         $this->service->store($request->all());
 
-        return redirect()->route('admin.blog.posts.index');
+        return redirect()->route('admin.projects.tags.index');
     }
 
     /**
@@ -73,9 +64,8 @@ class ProjectController extends Controller
     public function edit($id)
     {
         $data = $this->repository->find($id);
-        $categories = $this->project_category_repository->lists('name', 'id')->toArray();
 
-        return view('admin.blog.posts.index', compact('data', 'categories'));
+        return view('admin.projects.tags.index', compact('data'));
     }
 
     /**
@@ -89,7 +79,7 @@ class ProjectController extends Controller
     {
         $this->service->update($request->all(), $id);
 
-        return redirect()->route('admin.blog.posts.index');
+        return redirect()->route('admin.projects.tags.index');
     }
 
     /**
@@ -102,13 +92,13 @@ class ProjectController extends Controller
     {
         $this->service->delete($id);
 
-        return redirect()->route('admin.blog.posts.index');
+        return redirect()->route('admin.projects.tags.index');
     }
 
     public function changeStatus()
     {
         $this->service->changeStatus($_GET['item'], $_GET['element']);
 
-        return redirect()->route('admin.blog.posts.index');
+        return redirect()->route('admin.projects.tags.index');
     }
 }
