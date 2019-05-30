@@ -141,7 +141,6 @@
                                     {!! Form::text('keywords', $data->keywords, [
                                         'class'=>'form-control',
                                         'placeholder'=>'Insira as palavras-chave (SEO)',
-                                        'required'
                                         ])
                                     !!}
                                 </div>

@@ -106,8 +106,11 @@ class ProjectServiceAdm implements ProjectService
             }
 
             $entity =  $this->repository->update($data, $id);
-            $tags = $this->prepareTags($data['tags']);
-            $entity->project_tags()->sync($tags);
+
+            if (isset($data['tags'])) {
+                $entity->project_tags()->sync($data['tags']);
+                $entity->project_category->project_tags()->sync($data['tags'], false);
+            }
 
             if (isset($data['images']) and $data['images'][0] != '') {
                 foreach ($data['images'] as $image) {
