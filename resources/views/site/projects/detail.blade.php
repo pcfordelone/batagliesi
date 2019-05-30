@@ -5,8 +5,8 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-8 m-0 p-0">
-                @if ($data->default_img != '')
-                    <img src="/uploads/projects/{{ $data->default_img }}" class="m-0 p-0 img-fluid" width="100%" alt="" />
+                @if ($data->cover_img != '')
+                    <img src="/uploads/projects/{{ $data->cover_img }}" class="m-0 p-0 img-fluid" width="100%" alt="" />
                 @else
                     <img src="/images/projects/no-image.png" class="m-0 p-0 img-fluid" width="100%" alt="" />
                 @endif

@@ -33,9 +33,15 @@ class ProjectServiceAdm implements ProjectService
             (isset($data['featured'])) ? null : $data['featured'] = 0;
 
             if (isset($data['default_img'])) {
-                $image = uniqid('default-') . '.' . $data['url']->getClientOriginalExtension();
-                Storage::disk('public_projects')->put($image, File::get($data['url']));
+                $image = uniqid('default-') . '.' . $data['default_img']->getClientOriginalExtension();
+                Storage::disk('public_projects')->put($image, File::get($data['default_img']));
                 $data['default_img'] = $image;
+            }
+
+            if (isset($data['cover_img'])) {
+                $image = uniqid('cover-') . '.' . $data['cover_img']->getClientOriginalExtension();
+                Storage::disk('public_projects')->put($image, File::get($data['cover_img']));
+                $data['cover_img'] = $image;
             }
 
             $entity =  $this->repository->create($data);
@@ -88,6 +94,15 @@ class ProjectServiceAdm implements ProjectService
                 $image = uniqid('default_img') . '.' . $data['default_img']->getClientOriginalExtension();
                 Storage::disk('public_projects')->put($image, File::get($data['default_img']));
                 $data['default_img'] = $image;
+            }
+
+            if (isset($data['cover_img'])) {
+                if ($entity->default_img != "") {
+                    Storage::disk('public_projects')->delete($entity->default_img);
+                }
+                $image = uniqid('cover_img') . '.' . $data['cover_img']->getClientOriginalExtension();
+                Storage::disk('public_projects')->put($image, File::get($data['cover_img']));
+                $data['cover_img'] = $image;
             }
 
             $entity =  $this->repository->update($data, $id);

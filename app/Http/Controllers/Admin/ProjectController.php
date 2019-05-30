@@ -74,8 +74,9 @@ class ProjectController extends Controller
     {
         $data = $this->repository->find($id);
         $categories = $this->project_category_repository->lists('name', 'id')->toArray();
+        $tags = $this->project_tag_repository->all();
 
-        return view('admin.projects.edit', compact('data', 'categories'));
+        return view('admin.projects.edit', compact('data', 'categories', 'tags'));
     }
 
     /**
