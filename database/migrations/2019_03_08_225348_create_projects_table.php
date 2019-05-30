@@ -21,6 +21,8 @@ class CreateProjectsTable extends Migration
             $table->string('keywords')->nullable();
             $table->string('description')->nullable();
             $table->text('content')->nullable();
+            $table->string('client')->nullable();
+            $table->string('project_date')->nullable();
             $table->timestamps();
 
             $table->integer('project_category_id')->unsigned();

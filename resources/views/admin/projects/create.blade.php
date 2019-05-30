@@ -79,6 +79,23 @@
                         <hr/>
 
                         <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <p><strong>Sub-categorias</strong></p>
+                                    <div class="input-group">
+                                        <div class="icheck-inline">
+                                            @foreach($tags as $tag)
+                                                <label><input name="tags[]" type="checkbox" data-checkbox="icheckbox_flat-blue" value="{{ $tag->id }}"> {{ $tag->name }}</label>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr/>
+
+                        <div class="row">
                             <div class="col-md-4">
                                 <div class="form-group">
                                     {!! Form::label('name', 'Nome:') !!}
@@ -92,30 +109,39 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    {!! Form::label('keywords', 'Palavras-chave: (SEO)') !!}
-                                    {!! Form::text('keywords', null, [
+                                    {!! Form::label('client', 'Cliente:') !!}
+                                    {!! Form::text('client', null, [
                                         'class'=>'form-control',
-                                        'placeholder'=>'Insira as palavras-chave (SEO)',
-                                        'required'
+                                        'placeholder'=>'Insira o nome do cliente',
                                         ])
                                     !!}
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    {!! Form::label('tags', 'Sub-categoria:') !!}
-                                    {!! Form::text('tags', null, [
+                                    {!! Form::label('project_date', 'Data do Projeto:') !!}
+                                    {!! Form::text('project_date', null, [
                                         'class'=>'form-control',
-                                        'placeholder'=>'Insira as sub-categorias se houver',
-                                        'required'
+                                        'placeholder'=>'Insira a data do projeto',
                                         ])
                                     !!}
                                 </div>
                             </div>
+
                         </div>
 
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    {!! Form::label('keywords', 'Palavras-chave: (SEO)') !!}
+                                    {!! Form::text('keywords', null, [
+                                        'class'=>'form-control',
+                                        'placeholder'=>'Insira as palavras-chave (SEO)',
+                                        ])
+                                    !!}
+                                </div>
+                            </div>
+                            <div class="col-md-8">
                                 <div class="form-group">
                                     {!! Form::label('description', 'Descrição:') !!}
                                     {!! Form::text('description', null, [

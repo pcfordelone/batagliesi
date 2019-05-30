@@ -50,7 +50,6 @@
                                     <th>ID #</th>
                                     <th>Nome</th>
                                     <th>Ativo</th>
-                                    <th>Destaque</th>
                                     <th>Categoria</th>
                                     <th>Ação</th>
                                 </tr>
@@ -64,13 +63,6 @@
                                         <td>
                                             <label class="switch m-r-20">
                                                 <input type="checkbox" name="status" id="status" value="{{ $item->id }}" class="switch-input" @if ($item->status == 1) checked @endif>
-                                                <span class="switch-label" data-on="Sim" data-off="Não"></span>
-                                                <span class="switch-handle"></span>
-                                            </label>
-                                        </td>
-                                        <td>
-                                            <label class="switch m-r-20">
-                                                <input type="checkbox" name="featured" id="featured" value="{{ $item->id }}" class="switch-input" @if ($item->featured == 1) checked @endif>
                                                 <span class="switch-label" data-on="Sim" data-off="Não"></span>
                                                 <span class="switch-handle"></span>
                                             </label>
@@ -140,10 +132,10 @@
 
     <script>
         $(document).on("click", "#status", function(event) {
-            window.location = '/admin/blog/change_status/?item=' + $(this).val() + '&element=status';
+            window.location = '/admin/projects/change_status/?item=' + $(this).val() + '&element=status';
         });
         $(document).on("click", "#featured", function(event) {
-            window.location = '/admin/blog/change_status/?item=' + $(this).val() + '&element=featured';
+            window.location = '/admin/projects/change_status/?item=' + $(this).val() + '&element=featured';
         });
     </script>
 

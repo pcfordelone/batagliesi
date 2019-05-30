@@ -81,7 +81,24 @@
                         <hr/>
 
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <p><strong>Sub-categorias</strong></p>
+                                    <div class="input-group">
+                                        <div class="icheck-inline">
+                                            @foreach($tags as $tag)
+                                                <label><input {{ (in_array($tag->id, $data->project_tags()->lists('id')->toArray())) ? "checked" : null }} name="tags[]" type="checkbox" data-checkbox="icheckbox_flat-blue" value="{{ $tag->id }}"> {{ $tag->name }}</label>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr/>
+
+                        <div class="row">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     {!! Form::label('name', 'Nome:') !!}
                                     {!! Form::text('name', $data->name, [
@@ -94,6 +111,32 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
+                                    {!! Form::label('client', 'Cliente:') !!}
+                                    {!! Form::text('client', $data->name, [
+                                        'class'=>'form-control',
+                                        'placeholder'=>'Insira o nome do cliente',
+                                        'required'
+                                        ])
+                                    !!}
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    {!! Form::label('project_date', 'Data do Projeto:') !!}
+                                    {!! Form::text('project_date', $data->name, [
+                                        'class'=>'form-control',
+                                        'placeholder'=>'Insira a data do projeto',
+                                        'required'
+                                        ])
+                                    !!}
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
                                     {!! Form::label('keywords', 'Palavras-chave: (SEO)') !!}
                                     {!! Form::text('keywords', $data->keywords, [
                                         'class'=>'form-control',
@@ -103,21 +146,7 @@
                                     !!}
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    {!! Form::label('tags', 'Sub-categoria:') !!}
-                                    {!! Form::text('tags', $data->tag_list, [
-                                        'class'=>'form-control',
-                                        'placeholder'=>'Insira as sub-categorias se houver',
-                                        'required'
-                                        ])
-                                    !!}
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-8">
                                 <div class="form-group">
                                     {!! Form::label('description', 'Descrição:') !!}
                                     {!! Form::text('description', $data->description, [
@@ -137,7 +166,7 @@
                                 <div class="row">
                                     <div class="col-md-12" style="margin: 20px 0 20px 0">
                                         @if (isset($data->default_img) and $data->default_img != "")
-                                            <img src="/uploads/blog/{{ $data->default_img }}" style="max-height: 100px; border: 1px solid darkgrey;" />
+                                            <img src="/uploads/projects/{{ $data->default_img }}" style="max-height: 100px; border: 1px solid darkgrey;" />
                                         @else
                                             <p>Nenhuma imagem foi cadastrada.</p>
                                         @endif
@@ -160,12 +189,12 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <h2>Imagens Secundárias Cadastradas</h2>
-                                @if (count($data->blog_photos) > 0 and $data->blog_photos[0]->url != "")
+                                @if (count($data->project_images) > 0 and $data->project_images[0]->url != "")
                                     <div class="row">
-                                        @foreach($data->blog_photos as $photo)
-                                            <div class="col-md-2" style="margin: 20px 0 20px 0; text-align: center; margin-bottom: 20px">
-                                                <img src="/uploads/blog/{{ $photo->url }}" style="max-height: 100px; border: 1px solid darkgrey; margin-bottom: 5px" /><br/>
-                                                <a href="{{ route('admin.blog.posts.rm_photo', ['post_id' => $data->id, 'photo_id' => $photo->id]) }}" class="btn btn-sm btn-danger">Apagar</a>
+                                        @foreach($data->project_images as $photo)
+                                            <div class="col-md-2" style="margin: 20px 0 20px 0; text-align: center;">
+                                                <img src="/uploads/projects/{{ $photo->url }}" style="max-height: 100px; max-width: 95%; border: 1px solid darkgrey; margin-bottom: 5px" /><br/>
+                                                <a href="{{ route('admin.projects.rm_photo', ['post_id' => $data->id, 'photo_id' => $photo->id]) }}" class="btn btn-sm btn-danger">Apagar</a>
                                             </div>
                                         @endforeach
                                     </div>

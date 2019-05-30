@@ -15,6 +15,8 @@ class Project extends Model
         'description',
         'content',
         'project_category_id',
+        'client',
+        'project_date'
     ];
 
     public function project_category()
@@ -25,6 +27,11 @@ class Project extends Model
     public function project_tags()
     {
         return $this->belongsToMany(ProjectTag::class);
+    }
+
+    public function project_images()
+    {
+        return $this->hasMany(ProjectImage::class);
     }
 
     public function getTagListAttribute()
