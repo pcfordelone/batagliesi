@@ -1,7 +1,7 @@
 @extends('site.layout')
 
 @section('content')
-    <div class="container-fluid m-0 p-0" style="border: 1px solid red">
+    <div class="container-fluid m-0 p-0">
         <div class="row">
             <div class="col-lg-5 p-0">
                 {{--<section class="parallax section section-parallax match-height mb-0 pb-0" data-plugin-parallax data-plugin-options="{'speed': 1.5}" data-image-src="/images/about.jpg" style="min-height: 260px;">
