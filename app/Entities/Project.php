@@ -11,6 +11,7 @@ class Project extends Model
         'name',
         'slug',
         'default_img',
+        'cover_img',
         'keywords',
         'description',
         'content',

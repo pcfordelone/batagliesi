@@ -18,6 +18,7 @@ class CreateProjectsTable extends Migration
             $table->string('name')->unique();
             $table->string('slug')->unique();
             $table->string('default_img')->nullable();
+            $table->string('cover_img')->nullable();
             $table->string('keywords')->nullable();
             $table->string('description')->nullable();
             $table->text('content')->nullable();
