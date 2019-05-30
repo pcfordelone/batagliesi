@@ -44,11 +44,24 @@ h1, h2, h3, h4, h5, h6 {
     background: #00646b !important;
 }
 .btn-custom-yellow:hover {
-    background: #d2d500 !important;
+    background: #feba35 !important;
 }
 .btn-custom-blue:hover {
     background: #052349 !important;
 }
 .btn-custom-red:hover {
+    background: #b7222a !important;
+}
+
+.green-background {
+    background: #00646b !important;
+}
+.yellow-background {
+    background: #feba35 !important;
+}
+.blue-background {
+    background: #052349 !important;
+}
+.red-background {
     background: #b7222a !important;
 }

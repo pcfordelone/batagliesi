@@ -28,7 +28,7 @@
 
 									<span class="thumb-info-title">
 										<span class="thumb-info-inner">{{ $project->name }}</span>
-										<span class="thumb-info-type">Urbanismo</span>
+										<span class="thumb-info-type yellow-background">Urbanismo</span>
 									</span>
 									<span class="thumb-info-action">
 										<span class="thumb-info-action-icon bg-dark opacity-8"><i class="fas fa-plus"></i></span>
