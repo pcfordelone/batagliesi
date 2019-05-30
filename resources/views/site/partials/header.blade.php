@@ -9,9 +9,9 @@
                                 <nav class="collapse">
                                     <ul class="nav nav-pills" id="mainNav">
                                         <li><a class="dropdown-item btn-custom btn-custom-green" href="{{ route('site.about') }}">Perfil</a></li>
-                                        <li><a class="dropdown-item btn-custom btn-custom-yellow" href="{{ route('site.projects.index') }}">Arquitetura</a></li>
-                                        <li><a class="dropdown-item btn-custom btn-custom-blue" href="{{ route('site.projects.index') }}">Sistemas Ambientais</a></li>
-                                        <li><a class="dropdown-item btn-custom btn-custom-red" href="{{ route('site.projects.index') }}">Design</a></li>
+                                        <li><a class="dropdown-item btn-custom btn-custom-yellow" href="{{ route('site.projects.category', ['slug' => 'arquitetura']) }}">Arquitetura</a></li>
+                                        <li><a class="dropdown-item btn-custom btn-custom-blue" href="{{ route('site.projects.category', ['slug' => 'sistemas-ambientais']) }}">Sistemas Ambientais</a></li>
+                                        <li><a class="dropdown-item btn-custom btn-custom-red" href="{{ route('site.projects.category', ['slug' => 'design']) }}">Design</a></li>
                                         <li><a class="dropdown-item btn-custom" href="{{ route('site.blog.index') }}">Publicações</a></li>
                                         <li><a class="dropdown-item btn-custom" href="{{ route('site.contact') }}">Contato</a></li>
                                     </ul>

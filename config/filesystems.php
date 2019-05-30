@@ -58,6 +58,11 @@ return [
             'root'   => public_path() . '/uploads/banners',
         ],
 
+        'public_projects' => [
+            'driver' => 'local',
+            'root'   => public_path() . '/uploads/projects',
+        ],
+
         'ftp' => [
             'driver'   => 'ftp',
             'host'     => 'ftp.example.com',

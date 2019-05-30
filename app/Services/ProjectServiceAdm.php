@@ -32,16 +32,19 @@ class ProjectServiceAdm implements ProjectService
             (isset($data['status'])) ? null : $data['status'] = 0;
             (isset($data['featured'])) ? null : $data['featured'] = 0;
 
-            if(isset($data['default_img'])) {
-                $image = uniqid('default_img') . '.' . $data['default_img']->getClientOriginalExtension();
-                Storage::disk('public_projects')->put($image, File::get($data['default_img']));
+            if (isset($data['default_img'])) {
+                $image = uniqid('default-') . '.' . $data['url']->getClientOriginalExtension();
+                Storage::disk('public_projects')->put($image, File::get($data['url']));
                 $data['default_img'] = $image;
             }
 
             $entity =  $this->repository->create($data);
 
-            $tags = $this->prepareTags($data['tags']);
-            $entity->project_tags()->sync($tags);
+            if (isset($data['tags'])) {
+                $entity->project_tags()->sync($data['tags']);
+                $entity->project_category->project_tags()->sync($data['tags'], false);
+            }
+
 
             if (isset($data['images']) and $data['images'][0] != '') {
                 foreach ($data['images'] as $image) {

@@ -34,8 +34,9 @@ class MainController extends Controller
         return view('site.about');
     }
 
-    public function projects_index()
+    public function projects_index(ProjectRepository $projectRepository)
     {
+
         return view('site.projects.index');
     }
 

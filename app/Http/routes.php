@@ -124,9 +124,9 @@ Route::get('contato', ['as' => 'site.contact', 'uses' => 'Site\MainController@co
 
 /* Projetos */
 Route::group(['prefix' => 'projetos'], function() {
-    Route::get('', ['as' => 'site.projects.index', 'uses' => 'Site\MainController@projects_index']);
-    /*Route::get('categoria/{slug}', ['as' => 'site.projects.index', 'uses' => 'Site\MainController@projects_index']);*/
-    Route::get('detalhe', ['as' => 'site.projects.detail', 'uses' => 'Site\MainController@projects_detail']);
+    /*Route::get('', ['as' => 'site.projects.index', 'uses' => 'Site\MainController@projects_index']);*/
+    Route::get('categoria/{slug}', ['as' => 'site.projects.category', 'uses' => 'Site\ProjectController@index']);
+    Route::get('detalhe/{slug}', ['as' => 'site.projects.detail', 'uses' => 'Site\ProjectController@detail']);
 });
 
 /* Blog */

@@ -35,7 +35,7 @@ class ProjectController extends Controller
     {
         $data = $this->repository->all();
 
-        return view('admin.blog.posts.index', compact('data'));
+        return view('admin.projects.index', compact('data'));
     }
 
     /**
@@ -48,7 +48,7 @@ class ProjectController extends Controller
         $categories = $this->project_category_repository->lists('name', 'id')->toArray();
         $tags = $this->project_tag_repository->all();
 
-        return view('admin.blog.posts.create', compact('categories', 'tags'));
+        return view('admin.projects.create', compact('categories', 'tags'));
     }
 
     /**
@@ -61,7 +61,7 @@ class ProjectController extends Controller
     {
         $this->service->store($request->all());
 
-        return redirect()->route('admin.blog.posts.index');
+        return redirect()->route('admin.projects.index');
     }
 
     /**
@@ -75,7 +75,7 @@ class ProjectController extends Controller
         $data = $this->repository->find($id);
         $categories = $this->project_category_repository->lists('name', 'id')->toArray();
 
-        return view('admin.blog.posts.index', compact('data', 'categories'));
+        return view('admin.projects.edit', compact('data', 'categories'));
     }
 
     /**
@@ -89,7 +89,7 @@ class ProjectController extends Controller
     {
         $this->service->update($request->all(), $id);
 
-        return redirect()->route('admin.blog.posts.index');
+        return redirect()->route('admin.projects.index');
     }
 
     /**
@@ -102,13 +102,13 @@ class ProjectController extends Controller
     {
         $this->service->delete($id);
 
-        return redirect()->route('admin.blog.posts.index');
+        return redirect()->route('admin.projects.index');
     }
 
     public function changeStatus()
     {
         $this->service->changeStatus($_GET['item'], $_GET['element']);
 
-        return redirect()->route('admin.blog.posts.index');
+        return redirect()->route('admin.projects.index');
     }
 }
