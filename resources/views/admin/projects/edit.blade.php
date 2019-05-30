@@ -188,6 +188,32 @@
 
                         <div class="row">
                             <div class="col-md-12">
+                                <h2>Imagem de Capa Cadastrada</h2>
+                                <div class="row">
+                                    <div class="col-md-12" style="margin: 20px 0 20px 0">
+                                        @if (isset($data->cover_img) and $data->cover_img != "")
+                                            <img src="/uploads/projects/{{ $data->cover_img }}" style="max-height: 100px; border: 1px solid darkgrey;" />
+                                        @else
+                                            <p>Nenhuma imagem foi cadastrada.</p>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    {!! Form::label('cover_img', 'Nova Imagem de Capa:') !!}
+                                    {!! Form::file('cover_img', [
+                                        'class'=>'form-control',
+                                        ])
+                                    !!}
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr/>
+
+                        <div class="row">
+                            <div class="col-md-12">
                                 <h2>Imagens Secundárias Cadastradas</h2>
                                 @if (count($data->project_images) > 0 and $data->project_images[0]->url != "")
                                     <div class="row">

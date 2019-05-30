@@ -159,14 +159,21 @@
                             <div class="col-md-12">
                                 <h2>Imagens</h2>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     {!! Form::label('default_img', 'Imagem Principal:') !!}
                                     {!! Form::file('default_img', ['class'=>'form-control'])
                                     !!}
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    {!! Form::label('cover_img', 'Imagem de Capa:') !!}
+                                    {!! Form::file('cover_img', ['class'=>'form-control'])
+                                    !!}
+                                </div>
+                            </div>
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     {!! Form::label('images', 'Imagens Secundárias:') !!}
                                     {!! Form::file('images[]', ['class'=>'form-control', 'multiple' => 'multiple']) !!}
