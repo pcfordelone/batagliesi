@@ -97,8 +97,8 @@ class ProjectServiceAdm implements ProjectService
             }
 
             if (isset($data['cover_img'])) {
-                if ($entity->default_img != "") {
-                    Storage::disk('public_projects')->delete($entity->default_img);
+                if ($entity->cover_img != "") {
+                    Storage::disk('public_projects')->delete($entity->cover_img);
                 }
                 $image = uniqid('cover_img') . '.' . $data['cover_img']->getClientOriginalExtension();
                 Storage::disk('public_projects')->put($image, File::get($data['cover_img']));
