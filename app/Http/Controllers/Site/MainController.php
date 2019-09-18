@@ -34,6 +34,11 @@ class MainController extends Controller
         return view('site.about');
     }
 
+    public function awards()
+    {
+        return view('site.awards');
+    }
+
     public function projects_index(ProjectRepository $projectRepository)
     {
 

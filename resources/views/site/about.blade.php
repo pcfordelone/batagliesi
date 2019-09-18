@@ -16,7 +16,7 @@
                             <span class="d-block text-color-light text-5 mb-4 pb-2">
                                 Arquitetos + Designers
                             </span>
-                            <p class="text-3 mb-4 pr-4 pb-4 text-justify">
+                            <p class="text-3 mb-4 pb-4 text-justify" style="padding-right: 150px">
                                 A Batagliesi acredita que conhecimento – concepção e técnica, cumprimento das previsões de custos, cronogramas e postura ética são atributos fundamentais de uma atuação profissional. Oferecemos uma estrutura onde comprometimento, flexibilidade, disponibilidade, transparência e organização são condutas seguidas ao longo de nossa carreira.
                                 <br/><br/>
                                 ​A estes compromissos aliamos nossa paixão e prazer pelo ofício para a construção de projetos de identidade e da identidade dos projetos.

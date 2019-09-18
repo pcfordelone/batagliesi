@@ -3,7 +3,7 @@
         <div class="container py-2">
             <div class="row py-4">
                 <div class="col text-center">
-                    <ul class="footer-social-icons social-icons social-icons-clean social-icons-icon-light mb-3">
+                    <ul class="footer-social-icons social-icons mb-3">
                         <li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in fa-2x"></i></a></li>
                         <li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook fa-2x"></i></a></li>
                         <li class="social-icons-instagram"><a href="http://www.instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram fa-2x"></i></a></li>

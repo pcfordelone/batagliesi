@@ -21,7 +21,7 @@
     </div>
 
     {{-- Clientes --}}
-    <div class="container-fluid mb-0 pb-0">
+    {{--<div class="container-fluid mb-0 pb-0">
         <div class="row mb-0 pb-0">
             <div class="col pt-5 pb-3 home-clients">
                 <div class="owl-carousel owl-theme full-width" data-plugin-options="{'responsive': {'0': {'items': 1}, '476': {'items': 1}, '768': {'items': 5}, '992': {'items': 6}, '1200': {'items': 6}}, 'autoplay': true, 'autoplayTimeout': 3000, 'dots': false}">
@@ -52,10 +52,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>--}}
 
     {{-- Blog --}}
-    <section class="section section-default bg-color-dark-scale-3 mt-0">
+    {{--<section class="section section-default bg-color-dark-scale-3 mt-0">
         <div class="container-fluid">
             <div class="row mt-0">
                 <div class="col">
@@ -99,130 +99,7 @@
                 @endforeach
             </div>
         </div>
-    </section>
+    </section>--}}
 
-    {{-- Premiações --}}
-    <div class="container mb-0 pb-0">
-        <div class="row">
-            <div class="col">
-                <h2 class="text-uppercase font-weight-normal text-center">Premiações</h2>
-            </div>
-        </div>
-    </div>
-    <div class="image-gallery sort-destination full-width">
-        <div class="isotope-item">
-            <div class="image-gallery-item">
-                <a href="#">
-                    <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten">
-                        <span class="thumb-info-wrapper">
-                            <img src="/images/award01.jpg" class="img-fluid" alt="">
-                            <span class="thumb-info-action">
-                                <span class="thumb-info-action-icon"><i class="fas fa-plus"></i></span>
-                            </span>
-                        </span>
-                    </span>
-                </a>
-            </div>
-        </div>
-        <div class="isotope-item">
-            <div class="image-gallery-item">
-                <a href="#">
-                    <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten">
-                        <span class="thumb-info-wrapper">
-                            <img src="/images/award02.jpg" class="img-fluid" alt="">
-                            <span class="thumb-info-action">
-                                <span class="thumb-info-action-icon"><i class="fas fa-plus"></i></span>
-                            </span>
-                        </span>
-                    </span>
-                </a>
-            </div>
-        </div>
-        <div class="isotope-item">
-            <div class="image-gallery-item">
-                <a href="#">
-                    <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten">
-                        <span class="thumb-info-wrapper">
-                            <img src="/images/award03.jpg" class="img-fluid" alt="">
-                            <span class="thumb-info-action">
-                                <span class="thumb-info-action-icon"><i class="fas fa-plus"></i></span>
-                            </span>
-                        </span>
-                    </span>
-                </a>
-            </div>
-        </div>
-        <div class="isotope-item">
-            <div class="image-gallery-item">
-                <a href="#">
-                    <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten">
-                        <span class="thumb-info-wrapper">
-                            <img src="/images/award04.jpg" class="img-fluid" alt="">
-                            <span class="thumb-info-action">
-                                <span class="thumb-info-action-icon"><i class="fas fa-plus"></i></span>
-                            </span>
-                        </span>
-                    </span>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="image-gallery sort-destination full-width">
-        <div class="isotope-item">
-            <div class="image-gallery-item">
-                <a href="#">
-                    <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten">
-                        <span class="thumb-info-wrapper">
-                            <img src="/images/award05.jpg" class="img-fluid" alt="">
-                            <span class="thumb-info-action">
-                                <span class="thumb-info-action-icon"><i class="fas fa-plus"></i></span>
-                            </span>
-                        </span>
-                    </span>
-                </a>
-            </div>
-        </div>
-        <div class="isotope-item">
-            <div class="image-gallery-item">
-                <a href="#">
-                    <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten">
-                        <span class="thumb-info-wrapper">
-                            <img src="/images/award06.jpg" class="img-fluid" alt="">
-                            <span class="thumb-info-action">
-                                <span class="thumb-info-action-icon"><i class="fas fa-plus"></i></span>
-                            </span>
-                        </span>
-                    </span>
-                </a>
-            </div>
-        </div>
-        <div class="isotope-item">
-            <div class="image-gallery-item">
-                <a href="#">
-                    <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten">
-                        <span class="thumb-info-wrapper">
-                            <img src="/images/award07.jpg" class="img-fluid" alt="">
-                            <span class="thumb-info-action">
-                                <span class="thumb-info-action-icon"><i class="fas fa-plus"></i></span>
-                            </span>
-                        </span>
-                    </span>
-                </a>
-            </div>
-        </div>
-        <div class="isotope-item">
-            <div class="image-gallery-item">
-                <a href="#">
-                    <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten">
-                        <span class="thumb-info-wrapper">
-                            <img src="/images/award08.jpg" class="img-fluid" alt="">
-                            <span class="thumb-info-action">
-                                <span class="thumb-info-action-icon"><i class="fas fa-plus"></i></span>
-                            </span>
-                        </span>
-                    </span>
-                </a>
-            </div>
-        </div>
-    </div>
+
 @stop

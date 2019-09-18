@@ -120,6 +120,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 /* Site --------------------------------------------------------------------------------- */
 Route::get('', ['as' => 'site.index', 'uses' => 'Site\MainController@index']);
 Route::get('perfil', ['as' => 'site.about', 'uses' => 'Site\MainController@about']);
+Route::get('premiações', ['as' => 'site.awards', 'uses' => 'Site\MainController@awards']);
 Route::get('contato', ['as' => 'site.contact', 'uses' => 'Site\MainController@contact']);
 
 /* Projetos */
