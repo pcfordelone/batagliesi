@@ -107,6 +107,13 @@
 <!-- Examples -->
 <script src="/js/examples/examples.portfolio.js"></script>
 
+<script>
+    $(document).ready(function(){
+        var current_page = location.pathname.replace('/projetos', '').replace('/categoria', '').replace('/', '');
+        $('.' + current_page).addClass('active');
+    });
+</script>
+
 <!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
