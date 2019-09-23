@@ -21,7 +21,7 @@
                                         <li><a class="dropdown-item btn-custom btn-custom-red" href="{{ route('site.projects.category', ['slug' => 'design']) }}">Design</a></li>
                                         <li><a class="dropdown-item btn-custom" href="{{ route('site.blog.index') }}">Publicações</a></li>
                                         <li><a class="dropdown-item btn-custom" href="{{ route('site.awards') }}">Premiações</a></li>
-                                        <li><a class="dropdown-item btn-custom" href="#">Clientes</a></li>
+                                        <li><a class="dropdown-item btn-custom" href="#">Operacional</a></li>
                                         <li><a class="dropdown-item btn-custom" href="{{ route('site.contact') }}">Contato</a></li>
                                     </ul>
                                 </nav>
