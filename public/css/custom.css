@@ -50,11 +50,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-custom-blue:hover {
-    background: #052349 !important;
+    background: #05327B !important;
 }
 
 .btn-custom-red:hover {
-    background: #b7222a !important;
+    background: #cc0a2f !important;
 }
 
 .green-background {
@@ -64,8 +64,8 @@ h1, h2, h3, h4, h5, h6 {
     background: #feba35 !important;
 }
 .blue-background {
-    background: #052349 !important;
+    background: #05327B !important;
 }
 .red-background {
-    background: #b7222a !important;
+    background: #cc0a2f !important;
 }
