@@ -65,7 +65,7 @@ class ProjectCategoryController extends Controller
     {
         $data = $this->repository->find($id);
 
-        return view('admin.projects.categories.index', compact('data'));
+        return view('admin.projects.categories.edit', compact('data'));
     }
 
     /**

@@ -23,7 +23,7 @@
                 <ol class="breadcrumb">
                     <ol class="breadcrumb">
                         <li><a href="{{ route('admin.index') }}"><i class="fa fa-home"></i> Home</a></li>
-                        <li><a href="{{ route('admin.projects.posts.index') }}"><i class="fa fa-folder-open-o"></i> Projetos</a></li>
+                        <li><a href="{{ route('admin.projects.index') }}"><i class="fa fa-folder-open-o"></i> Projetos</a></li>
                         <li><a href="{{ route('admin.projects.categories.index') }}"><i class="fa fa-tag"></i> Categorias</a></li>
                         <li class="active"><i class="fa fa-edit"></i> Editar {{ $data->name }}</li>
                     </ol>
