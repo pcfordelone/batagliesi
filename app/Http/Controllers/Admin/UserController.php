@@ -14,6 +14,8 @@ class UserController extends Controller
     private $repository;
     private $service;
 
+    private $role = ['' => "Selecione um tipo de usuário", 'admin' => 'admin', 'user' => 'user'];
+
     public function __construct(UserRepository $repository, UserService $service)
     {
         $this->repository = $repository;
@@ -39,7 +41,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('admin.users.create');
+        return view('admin.users.create', ['role' => $this->role]);
     }
 
     /**
@@ -64,8 +66,9 @@ class UserController extends Controller
     public function edit($id)
     {
         $data = $this->repository->find($id);
+        $role = $this->role;
 
-        return view('admin.users.edit', compact('data'));
+        return view('admin.users.edit', compact('data', 'role'));
     }
 
     /**
