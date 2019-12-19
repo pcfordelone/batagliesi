@@ -26,6 +26,9 @@
                                     </ul>
                                 </nav>
                             </div>
+                            <button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main nav">
+                                <i class="fas fa-bars"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
