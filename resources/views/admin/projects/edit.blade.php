@@ -87,7 +87,7 @@
                                     <div class="input-group">
                                         <div class="icheck-inline">
                                             @foreach($tags as $tag)
-                                                <label><input name="tags[]" type="checkbox" data-checkbox="icheckbox_flat-blue" value="{{ $tag->id }}"> {{ $tag->name }}</label>
+                                                <label><input name="tags[]" type="checkbox" data-checkbox="icheckbox_flat-blue" @if (in_array($tag->id, $data->project_tags()->lists('id')->toArray())) checked="checked" @endif value="{{ $tag->id }}"> {{ $tag->name }}</label>
                                             @endforeach
                                         </div>
                                     </div>

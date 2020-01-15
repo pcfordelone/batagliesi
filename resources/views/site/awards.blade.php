@@ -1,128 +1,35 @@
 @extends('site.layout')
 
 @section('content')
-    {{-- Premiações --}}
-    <div class="container mb-0 pb-0">
-        <div class="row">
-            <div class="col">
-                <h2 class="text-uppercase font-weight-normal text-center">Premiações</h2>
-            </div>
-        </div>
+    <div class="container py-2" style="display: none;">
+        <ul class="nav nav-pills sort-source sort-source-style-3 justify-content-center" data-sort-id="portfolio" data-option-key="filter" data-plugin-options="{'layoutMode': 'fitRows', 'filter': '*'}">
+            <li class="nav-item active" data-option-value="*"><a class="nav-link text-1 text-uppercase active" href="#">Todos</a></li>
+        </ul>
     </div>
-    <div class="image-gallery sort-destination full-width">
-        <div class="isotope-item">
-            <div class="image-gallery-item">
-                <a class="img-thumbnail img-thumbnail-no-borders d-block img-thumbnail-hover-icon lightbox" href="/images/award01.jpg" data-plugin-options="{'type':'image'}">
-                    <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten">
-                        <span class="thumb-info-wrapper">
-                            <img src="/images/award01.jpg" class="img-fluid" alt="">
-                            <span class="thumb-info-action">
-                                <span class="thumb-info-action-icon"><i class="fas fa-plus"></i></span>
-                            </span>
-                        </span>
-                    </span>
-                </a>
+
+    <div class="ml-4 mr-4 mt-4 pt-2">
+        <div class="sort-destination-loader sort-destination-loader-showing">
+            <div class="row portfolio-list sort-destination" data-sort-id="portfolio">
+				@for($i = 1; $i < 8; $i++)
+					<div class="col-md-6 col-lg-1-5 isotope-item general">
+						<div class="portfolio-item">
+							<a class="img-thumbnail img-thumbnail-no-borders d-block img-thumbnail-hover-icon lightbox" href="/images/award{{ $i }}.jpg" data-plugin-options="{'type':'image'}">
+							<span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0 m-0">
+								<span class="thumb-info-wrapper border-radius-0">
+
+									<img src="/images/award{{ $i }}.jpg" class="img-fluid border-radius-0" alt="">
+
+									<span class="thumb-info-action">
+										<span class="thumb-info-action-icon bg-dark opacity-8"><i class="fas fa-plus"></i></span>
+									</span>
+								</span>
+							</span>
+							</a>
+						</div>
+					</div>
+				@endfor
             </div>
         </div>
-        <div class="isotope-item">
-            <div class="image-gallery-item">
-                <a class="img-thumbnail img-thumbnail-no-borders d-block img-thumbnail-hover-icon lightbox" href="/images/award02.jpg" data-plugin-options="{'type':'image'}">
-                    <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten">
-                        <span class="thumb-info-wrapper">
-                            <img src="/images/award02.jpg" class="img-fluid" alt="">
-                            <span class="thumb-info-action">
-                                <span class="thumb-info-action-icon"><i class="fas fa-plus"></i></span>
-                            </span>
-                        </span>
-                    </span>
-                </a>
-            </div>
-        </div>
-        <div class="isotope-item">
-            <div class="image-gallery-item">
-                <a class="img-thumbnail img-thumbnail-no-borders d-block img-thumbnail-hover-icon lightbox" href="/images/award03.jpg" data-plugin-options="{'type':'image'}">
-                    <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten">
-                        <span class="thumb-info-wrapper">
-                            <img src="/images/award03.jpg" class="img-fluid" alt="">
-                            <span class="thumb-info-action">
-                                <span class="thumb-info-action-icon"><i class="fas fa-plus"></i></span>
-                            </span>
-                        </span>
-                    </span>
-                </a>
-            </div>
-        </div>
-        <div class="isotope-item">
-            <div class="image-gallery-item">
-                <a class="img-thumbnail img-thumbnail-no-borders d-block img-thumbnail-hover-icon lightbox" href="/images/award04.jpg" data-plugin-options="{'type':'image'}">
-                    <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten">
-                        <span class="thumb-info-wrapper">
-                            <img src="/images/award04.jpg" class="img-fluid" alt="">
-                            <span class="thumb-info-action">
-                                <span class="thumb-info-action-icon"><i class="fas fa-plus"></i></span>
-                            </span>
-                        </span>
-                    </span>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="image-gallery sort-destination full-width">
-        <div class="isotope-item">
-            <div class="image-gallery-item">
-                <a class="img-thumbnail img-thumbnail-no-borders d-block img-thumbnail-hover-icon lightbox" href="/images/award05.jpg" data-plugin-options="{'type':'image'}">
-                    <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten">
-                        <span class="thumb-info-wrapper">
-                            <img src="/images/award05.jpg" class="img-fluid" alt="">
-                            <span class="thumb-info-action">
-                                <span class="thumb-info-action-icon"><i class="fas fa-plus"></i></span>
-                            </span>
-                        </span>
-                    </span>
-                </a>
-            </div>
-        </div>
-        <div class="isotope-item">
-            <div class="image-gallery-item">
-                <a class="img-thumbnail img-thumbnail-no-borders d-block img-thumbnail-hover-icon lightbox" href="/images/award06.jpg" data-plugin-options="{'type':'image'}">
-                    <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten">
-                        <span class="thumb-info-wrapper">
-                            <img src="/images/award06.jpg" class="img-fluid" alt="">
-                            <span class="thumb-info-action">
-                                <span class="thumb-info-action-icon"><i class="fas fa-plus"></i></span>
-                            </span>
-                        </span>
-                    </span>
-                </a>
-            </div>
-        </div>
-        <div class="isotope-item">
-            <div class="image-gallery-item">
-                <a class="img-thumbnail img-thumbnail-no-borders d-block img-thumbnail-hover-icon lightbox" href="/images/award07.jpg" data-plugin-options="{'type':'image'}">
-                    <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten">
-                        <span class="thumb-info-wrapper">
-                            <img src="/images/award07.jpg" class="img-fluid" alt="">
-                            <span class="thumb-info-action">
-                                <span class="thumb-info-action-icon"><i class="fas fa-plus"></i></span>
-                            </span>
-                        </span>
-                    </span>
-                </a>
-            </div>
-        </div>
-        <div class="isotope-item">
-            <div class="image-gallery-item">
-                <a class="img-thumbnail img-thumbnail-no-borders d-block img-thumbnail-hover-icon lightbox" href="/images/award08.jpg" data-plugin-options="{'type':'image'}">
-                    <span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-lighten">
-                        <span class="thumb-info-wrapper">
-                            <img src="/images/award08.jpg" class="img-fluid" alt="">
-                            <span class="thumb-info-action">
-                                <span class="thumb-info-action-icon"><i class="fas fa-plus"></i></span>
-                            </span>
-                        </span>
-                    </span>
-                </a>
-            </div>
-        </div>
+
     </div>
 @stop
