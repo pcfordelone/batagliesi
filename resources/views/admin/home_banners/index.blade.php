@@ -132,10 +132,10 @@
 
     <script>
         $(document).on("click", "#status", function(event) {
-            window.location = '/admin/blog/change_status/?item=' + $(this).val() + '&element=status';
+            window.location = '/admin/home_banners/change_status?item=' + $(this).val() + '&element=status';
         });
         $(document).on("click", "#featured", function(event) {
-            window.location = '/admin/blog/change_status/?item=' + $(this).val() + '&element=featured';
+            window.location = '/admin/home_banners/change_status?item=' + $(this).val() + '&element=featured';
         });
     </script>
 

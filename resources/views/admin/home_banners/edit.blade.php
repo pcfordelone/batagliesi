@@ -43,7 +43,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="status">Ativo:</label>
-                                    {!! Form::select('status', [0 => 'Não', 1 => 'Sim'], $data->url, [
+                                    {!! Form::select('status', [0 => 'Não', 1 => 'Sim'], $data->status, [
                                             'class'=>'form-control',
                                             'style' => "width:100%;",
                                             'required'

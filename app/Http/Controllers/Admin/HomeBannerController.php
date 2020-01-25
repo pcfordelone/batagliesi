@@ -67,7 +67,7 @@ class HomeBannerController extends Controller
     {
         $data = $this->repository->find($id);
 
-        return view('admin.home_banners.index', compact('data'));
+        return view('admin.home_banners.edit', compact('data'));
     }
 
     /**

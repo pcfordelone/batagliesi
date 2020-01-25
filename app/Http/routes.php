@@ -26,7 +26,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     });
 
     /* Banner --------------------------------------------------------------------------------------------------------------------- */
-    Route::group(['prefix' => 'home_banner'], function() {
+    Route::group(['prefix' => 'home_banners'], function() {
         Route::get('', ['as' => 'admin.home_banners.index', 'uses' => 'Admin\HomeBannerController@index']);
         Route::get('detail/{id}', ['as' => 'admin.home_banners.detail', 'uses' => 'Admin\HomeBannerController@show']);
         Route::get('create', ['as' => 'admin.home_banners.create', 'uses' => 'Admin\HomeBannerController@create']);
