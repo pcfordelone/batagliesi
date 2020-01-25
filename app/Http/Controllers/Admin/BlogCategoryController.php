@@ -65,7 +65,7 @@ class BlogCategoryController extends Controller
     {
         $data = $this->repository->find($id);
 
-        return view('admin.blog.categories.index', compact('data'));
+        return view('admin.blog.categories.edit', compact('data'));
     }
 
     /**
