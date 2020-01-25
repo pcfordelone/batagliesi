@@ -48,6 +48,11 @@ return [
             'root'   => storage_path('app'),
         ],
 
+        'public_awards' => [
+            'driver' => 'local',
+            'root'   => public_path() . '/uploads/awards',
+        ],
+
         'public_blog' => [
             'driver' => 'local',
             'root'   => public_path() . '/uploads/blog',

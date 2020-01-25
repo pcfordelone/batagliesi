@@ -5,15 +5,15 @@
     <div class="page-content">
         <div class="header">
             <h2>
-                Blog - <small>Editar Postagem</small>
+                Premiações - <small>Editar Premiação</small>
             </h2>
 
             <div class="breadcrumb-wrapper">
                 <ol class="breadcrumb">
                     <ol class="breadcrumb">
                         <li><a href="{{ route('admin.index') }}"><i class="fa fa-home"></i> Home</a></li>
-                        <li><a href="{{ route('admin.blog.posts.index') }}"><i class="fa fa-journal"></i> Blog</a></li>
-                        <li class="active"><i class="fa fa-edit"></i> Editar Postagem</li>
+                        <li><a href="{{ route('admin.awards.index') }}"><i class="fa fa-journal"></i> Premiações</a></li>
+                        <li class="active"><i class="fa fa-edit"></i> Editar Premiação</li>
                     </ol>
                 </ol>
             </div>
@@ -36,6 +36,20 @@
                                         <li>{{ $error }}</li>
                                     @endforeach
                                 </ul>
+                            </div>
+                        @endif
+
+                        @if(Session::has('success'))
+                            <div class="alert alert-success">
+                                {!! \Illuminate\Support\Facades\Session::get('success')  !!}
+                            </div>
+                        @elseif(\Illuminate\Support\Facades\Session::has('warning'))
+                            <div class="alert alert-warning">
+                                {!! \Illuminate\Support\Facades\Session::get('warning')  !!}
+                            </div>
+                        @elseif(\Illuminate\Support\Facades\Session::has('danger'))
+                            <div class="alert alert-danger">
+                                {!! \Illuminate\Support\Facades\Session::get('danger')  !!}
                             </div>
                         @endif
 
@@ -121,12 +135,12 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <h2>Imagens Secundárias Cadastradas</h2>
-                                @if (count($data->awards_images) > 0 and $data->awards_images[0]->url != "")
+                                @if (count($data->award_images) > 0 and $data->award_images[0]->url != "")
                                     <div class="row">
-                                        @foreach($data->awards_images as $image)
+                                        @foreach($data->award_images as $image)
                                             <div class="col-md-2" style="margin: 20px 0 20px 0; text-align: center; margin-bottom: 20px">
                                                 <img src="/uploads/awards/{{ $image->url }}" style="max-height: 100px; border: 1px solid darkgrey; margin-bottom: 5px" /><br/>
-                                                <a href="#" class="btn btn-sm btn-danger">Apagar</a>
+                                                <a href="{{ route('admin.awards.rm_photo', ['award_id' => $data->id, 'photo_id' => $image->id]) }}" class="btn btn-sm btn-danger">Apagar</a>
                                             </div>
                                         @endforeach
                                     </div>

@@ -20,11 +20,6 @@ class AwardController extends Controller
         $this->service = $service;
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $data = $this->repository->all();
@@ -32,22 +27,11 @@ class AwardController extends Controller
         return view('admin.awards.index', compact('data'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view('admin.awards.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $this->service->store($request->all());
@@ -55,26 +39,13 @@ class AwardController extends Controller
         return redirect()->route('admin.awards.index');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         $data = $this->repository->find($id);
 
-        return view('admin.awards.index', compact('data'));
+        return view('admin.awards.edit', compact('data'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
         $this->service->update($request->all(), $id);
@@ -82,12 +53,6 @@ class AwardController extends Controller
         return redirect()->route('admin.awards.index');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $this->service->delete($id);
@@ -100,5 +65,12 @@ class AwardController extends Controller
         $this->service->changeStatus($_GET['item'], $_GET['element']);
 
         return redirect()->route('admin.awards.index');
+    }
+
+    public function rm_photo($model_id, $photo_id)
+    {
+        $this->service->rm_photo($photo_id);
+
+        return redirect()->route('admin.awards.edit', ['id' => $model_id]);
     }
 }

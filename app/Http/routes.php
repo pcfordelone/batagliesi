@@ -22,6 +22,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
         Route::get('delete/{id}', ['as' => 'admin.awards.delete', 'uses' => 'Admin\AwardController@destroy']);
         Route::get('rm_photos/{id}', ['as' => 'admin.awards.rm_photos', 'uses' => 'Admin\AwardController@rm_photos']);
         Route::get('change_status', ['as' => 'admin.awards.change_status', 'uses' => 'Admin\AwardController@changeStatus']);
+        Route::get('rm_photo/{id}/{photo_id}', ['as' => 'admin.awards.rm_photo', 'uses' => 'Admin\AwardController@rm_photo']);
     });
 
     /* Banner --------------------------------------------------------------------------------------------------------------------- */

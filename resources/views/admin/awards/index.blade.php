@@ -49,6 +49,7 @@
                                 <tr>
                                     <th>ID #</th>
                                     <th>Nome</th>
+                                    <th>Imagem Principal</th>
                                     <th>Ativo</th>
                                     <th>Ação</th>
                                 </tr>
@@ -58,7 +59,12 @@
                                 @foreach($data as $item)
                                     <tr>
                                         <td>{{ $item->id }}</td>
-                                        <td>{{ $item->title }}</td>
+                                        <td>{{ $item->name }}</td>
+                                        <td>
+                                            @if ($item->default_img != '')
+                                                <img src="/uploads/awards/{{ $item->default_img }}" alt="" style="max-height: 100px; max-width: 200px">
+                                            @endif
+                                        </td>
                                         <td>
                                             <label class="switch m-r-20">
                                                 <input type="checkbox" name="status" id="status" value="{{ $item->id }}" class="switch-input" @if ($item->status == 1) checked @endif>
@@ -128,10 +134,10 @@
 
     <script>
         $(document).on("click", "#status", function(event) {
-            window.location = '/admin/blog/change_status/?item=' + $(this).val() + '&element=status';
+            window.location = '/admin/awards/change_status/?item=' + $(this).val() + '&element=status';
         });
         $(document).on("click", "#featured", function(event) {
-            window.location = '/admin/blog/change_status/?item=' + $(this).val() + '&element=featured';
+            window.location = '/admin/awards/change_status/?item=' + $(this).val() + '&element=featured';
         });
     </script>
 

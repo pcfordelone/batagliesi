@@ -5,7 +5,7 @@
     <div class="page-content">
         <div class="header">
             <h2>
-                Blog - <small>Criar Nova Postagem</small>
+                Premiações - <small>Nova Premiação</small>
             </h2>
 
             <div class="breadcrumb-wrapper">

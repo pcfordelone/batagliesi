@@ -202,4 +202,16 @@ class AwardServiceAdm implements AwardService
         return (strtolower(str_replace($what, $by, $string)));
     }
 
+    public function rm_photo($photo_id)
+    {
+        $photo = $this->award_image_repository->find($photo_id);
+
+        Storage::disk('public_awards')->delete($photo->url);
+        $this->award_image_repository->delete($photo_id);
+
+        Session::flash('warning', 'Foto excluída com sucesso.');
+
+        return true;
+    }
+
 }
