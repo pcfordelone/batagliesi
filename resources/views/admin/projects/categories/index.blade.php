@@ -5,7 +5,7 @@
     <div class="page-content">
         <div class="header">
             <h2>
-                Blog - <small>Categorias Cadastradas</small>
+                Projetos - <small>Categorias Cadastradas</small>
             </h2>
 
             <div class="breadcrumb-wrapper">
@@ -37,6 +37,10 @@
                         @elseif(\Illuminate\Support\Facades\Session::has('warning'))
                             <div class="alert alert-danger">
                                 {!! \Illuminate\Support\Facades\Session::get('warning')  !!}
+                            </div>
+                        @elseif(\Illuminate\Support\Facades\Session::has('danger'))
+                            <div class="alert alert-danger">
+                                {!! \Illuminate\Support\Facades\Session::get('danger')  !!}
                             </div>
                         @endif
 
@@ -131,7 +135,7 @@
 
     <script>
         $(document).on("click", "#status", function(event) {
-            window.location = '/admin/blog/categorias/change_status/?item=' + $(this).val() + '&element=status';
+            window.location = '/admin/projects/categorias/change_status/?item=' + $(this).val() + '&element=status';
         });
     </script>
 @stop
