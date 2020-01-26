@@ -5,15 +5,15 @@
     <div class="page-content">
         <div class="header">
             <h2>
-                Blog - <small>Editar Postagem</small>
+                Projetos - <small>Editar Projeto</small>
             </h2>
 
             <div class="breadcrumb-wrapper">
                 <ol class="breadcrumb">
                     <ol class="breadcrumb">
                         <li><a href="{{ route('admin.index') }}"><i class="fa fa-home"></i> Home</a></li>
-                        <li><a href="{{ route('admin.blog.posts.index') }}"><i class="fa fa-journal"></i> Blog</a></li>
-                        <li class="active"><i class="fa fa-edit"></i> Editar Postagem</li>
+                        <li><a href="{{ route('admin.projects.index') }}"><i class="fa fa-folder-open-o"></i> Projetos</a></li>
+                        <li class="active"><i class="fa fa-edit"></i> Editar Projeto</li>
                     </ol>
                 </ol>
             </div>
@@ -46,19 +46,6 @@
                                     {!! Form::select('status', [0 => 'Não', 1 => 'Sim'], $data->status, [
                                             'class'=>'form-control',
                                             'style' => "width:100%;",
-                                            'data-search' => 'true',
-                                            'required'
-                                        ])
-                                    !!}
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="featured">Destaque:</label>
-                                    {!! Form::select('featured', [0 => 'Não', 1 => 'Sim'], $data->featured, [
-                                            'class'=>'form-control',
-                                            'style' => "width:100%;",
-                                            'data-search' => 'true',
                                             'required'
                                         ])
                                     !!}
@@ -70,7 +57,6 @@
                                     {!! Form::select('project_category_id', $categories, $data->project_category_id, [
                                             'class'=>'form-control',
                                             'style' => "width:100%;",
-                                            'data-search' => 'true',
                                             'required'
                                         ])
                                     !!}
@@ -123,7 +109,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     {!! Form::label('project_date', 'Data do Projeto:') !!}
-                                    {!! Form::text('project_date', $data->name, [
+                                    {!! Form::text('project_date', $data->project_date, [
                                         'class'=>'form-control',
                                         'placeholder'=>'Insira a data do projeto',
                                         'required'

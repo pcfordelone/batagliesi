@@ -38,7 +38,7 @@
                                 {!! \Illuminate\Support\Facades\Session::get('warning')  !!}
                             </div>
                         @elseif(\Illuminate\Support\Facades\Session::has('danger'))
-                            <div class="alert alert-warning">
+                            <div class="alert alert-danger">
                                 {!! \Illuminate\Support\Facades\Session::get('danger')  !!}
                             </div>
                         @endif

@@ -35,8 +35,12 @@
                                 {!! \Illuminate\Support\Facades\Session::get('success')  !!}
                             </div>
                         @elseif(\Illuminate\Support\Facades\Session::has('warning'))
-                            <div class="alert alert-danger">
+                            <div class="alert alert-warning">
                                 {!! \Illuminate\Support\Facades\Session::get('warning')  !!}
+                            </div>
+                        @elseif(\Illuminate\Support\Facades\Session::has('danger'))
+                            <div class="alert alert-danger">
+                                {!! \Illuminate\Support\Facades\Session::get('danger')  !!}
                             </div>
                         @endif
 
@@ -46,7 +50,6 @@
                                 <tr>
                                     <th>ID #</th>
                                     <th width="30%">Nome</th>
-                                    <th>Status</th>
                                     <th>Data de Criação</th>
                                     <th>Última Alteração</th>
                                     <th>Ação</th>
@@ -58,13 +61,6 @@
                                     <tr>
                                         <td>{{ $item->id }}</td>
                                         <td>{{ $item->name }}</td>
-                                        <td>
-                                            <label class="switch m-r-20">
-                                                <input type="checkbox" name="status" id="status" value="{{ $item->id }}" class="switch-input" @if ($item->status == 1) checked @endif>
-                                                <span class="switch-label" data-on="Sim" data-off="Não"></span>
-                                                <span class="switch-handle"></span>
-                                            </label>
-                                        </td>
                                         <td>{{ date('d/m/Y', strtotime($item->created_at)) }}</td>
                                         <td>{{ date('d/m/Y', strtotime($item->updated_at)) }}</td>
                                         <td>
@@ -128,10 +124,4 @@
     <script src="/assets/plugins/datatables/dataTables.bootstrap.min.js"></script>
     <script src="/assets/js/pages/table_dynamic.js"></script>
     <!-- END PAGE SCRIPTS -->
-
-    <script>
-        $(document).on("click", "#status", function(event) {
-            window.location = '/admin/blog/categorias/change_status/?item=' + $(this).val() + '&element=status';
-        });
-    </script>
 @stop

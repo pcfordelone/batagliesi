@@ -16,14 +16,14 @@
     <div class="page-content">
         <div class="header">
             <h2>
-                Projetos - <small>Editar Categoria {{ $data->name }}</small>
+                Projetos - <small>Editar Sub-Categoria {{ $data->name }}</small>
             </h2>
 
             <div class="breadcrumb-wrapper">
                 <ol class="breadcrumb">
                     <ol class="breadcrumb">
                         <li><a href="{{ route('admin.index') }}"><i class="fa fa-home"></i> Home</a></li>
-                        <li><a href="{{ route('admin.projects.posts.index') }}"><i class="fa fa-folder-open-o"></i> Projetos</a></li>
+                        <li><a href="{{ route('admin.projects.index') }}"><i class="fa fa-folder-open-o"></i> Projetos</a></li>
                         <li><a href="{{ route('admin.projects.tags.index') }}"><i class="fa fa-tag"></i> Sub-categorias</a></li>
                         <li class="active"><i class="fa fa-edit"></i> Editar {{ $data->name }}</li>
                     </ol>
@@ -52,17 +52,6 @@
                         @endif
 
                         <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="status">Status:</label>
-                                    {!! Form::select('status', [0 => 'Desativada', 1 => 'Ativa'], $data->status, [
-                                            'class'=>'form-control',
-                                            'style' => "width:100%;",
-                                            'required'
-                                        ])
-                                    !!}
-                                </div>
-                            </div>
                             <div class="col-md-8">
                                 <div class="form-group">
                                     {!! Form::label('name', 'Nome:') !!}

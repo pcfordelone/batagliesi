@@ -245,4 +245,16 @@ class ProjectServiceAdm implements ProjectService
 
         return $project_tags;
     }
+
+    public function rm_photo($photo_id)
+    {
+        $photo = $this->project_image_repository->find($photo_id);
+
+        Storage::disk('public_projects')->delete($photo->url);
+        $this->project_image_repository->delete($photo_id);
+
+        Session::flash('warning', 'Foto excluída com sucesso.');
+
+        return true;
+    }
 }

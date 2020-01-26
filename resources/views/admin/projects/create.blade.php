@@ -53,22 +53,10 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <label for="featured">Destaque:</label>
-                                    {!! Form::select('featured', [0 => 'Não', 1 => 'Sim'], 0, [
-                                            'class'=>'form-control',
-                                            'style' => "width:100%;",
-                                            'required'
-                                        ])
-                                    !!}
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
                                     <label for="featured">Categoria:</label>
                                     {!! Form::select('project_category_id', $categories, null, [
                                             'class'=>'form-control',
                                             'style' => "width:100%;",
-                                            'data-search' => 'true',
                                             'required'
                                         ])
                                     !!}

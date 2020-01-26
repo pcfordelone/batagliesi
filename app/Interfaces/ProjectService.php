@@ -19,4 +19,6 @@ interface ProjectService
     public function changeStatus($id, $element);
 
     public function sanitizeString($string);
+
+    public function rm_photo($photo_id);
 }

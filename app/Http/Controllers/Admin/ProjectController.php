@@ -26,11 +26,6 @@ class ProjectController extends Controller
         $this->project_tag_repository = $projectTagRepository;
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $data = $this->repository->all();
@@ -38,11 +33,6 @@ class ProjectController extends Controller
         return view('admin.projects.index', compact('data'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         $categories = $this->project_category_repository->lists('name', 'id')->toArray();
@@ -51,12 +41,6 @@ class ProjectController extends Controller
         return view('admin.projects.create', compact('categories', 'tags'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $this->service->store($request->all());
@@ -64,12 +48,6 @@ class ProjectController extends Controller
         return redirect()->route('admin.projects.index');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         $data = $this->repository->find($id);
@@ -79,13 +57,6 @@ class ProjectController extends Controller
         return view('admin.projects.edit', compact('data', 'categories', 'tags'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
         $this->service->update($request->all(), $id);
@@ -93,12 +64,6 @@ class ProjectController extends Controller
         return redirect()->route('admin.projects.index');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $this->service->delete($id);
@@ -111,5 +76,12 @@ class ProjectController extends Controller
         $this->service->changeStatus($_GET['item'], $_GET['element']);
 
         return redirect()->route('admin.projects.index');
+    }
+
+    public function rm_photo($model_id, $photo_id)
+    {
+        $this->service->rm_photo($photo_id);
+
+        return redirect()->route('admin.projects.edit', ['id' => $model_id]);
     }
 }

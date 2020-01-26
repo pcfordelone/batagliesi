@@ -55,17 +55,6 @@
                         @endif
 
                         <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="status">Status:</label>
-                                    {!! Form::select('status', [0 => 'Desativada', 1 => 'Ativa'], 1, [
-                                            'class'=>'form-control',
-                                            'style' => "width:100%;",
-                                            'required'
-                                        ])
-                                    !!}
-                                </div>
-                            </div>
                             <div class="col-md-8">
                                 <div class="form-group">
                                     {!! Form::label('name', 'Nome:') !!}

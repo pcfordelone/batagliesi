@@ -65,7 +65,7 @@ class ProjectTagController extends Controller
     {
         $data = $this->repository->find($id);
 
-        return view('admin.projects.tags.index', compact('data'));
+        return view('admin.projects.tags.edit', compact('data'));
     }
 
     /**
