@@ -46,7 +46,6 @@
                                     {!! Form::select('status', [0 => 'Não', 1 => 'Sim'], $data->status, [
                                             'class'=>'form-control',
                                             'style' => "width:100%;",
-                                            'data-search' => 'true',
                                             'required'
                                         ])
                                     !!}
@@ -58,7 +57,6 @@
                                     {!! Form::select('featured', [0 => 'Não', 1 => 'Sim'], $data->featured, [
                                             'class'=>'form-control',
                                             'style' => "width:100%;",
-                                            'data-search' => 'true',
                                             'required'
                                         ])
                                     !!}
@@ -70,7 +68,6 @@
                                     {!! Form::select('blog_category_id', $categories, $data->blog_category_id, [
                                             'class'=>'form-control',
                                             'style' => "width:100%;",
-                                            'data-search' => 'true',
                                             'required'
                                         ])
                                     !!}
@@ -158,9 +155,9 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <h2>Imagens Secundárias Cadastradas</h2>
-                                @if (count($data->blog_photos) > 0 and $data->blog_photos[0]->url != "")
+                                @if (count($data->blog_post_images) > 0 and $data->blog_post_images[0]->url != "")
                                     <div class="row">
-                                        @foreach($data->blog_photos as $photo)
+                                        @foreach($data->blog_post_images as $photo)
                                             <div class="col-md-2" style="margin: 20px 0 20px 0; text-align: center; margin-bottom: 20px">
                                                 <img src="/uploads/blog/{{ $photo->url }}" style="max-height: 100px; border: 1px solid darkgrey; margin-bottom: 5px" /><br/>
                                                 <a href="{{ route('admin.blog.posts.rm_photo', ['post_id' => $data->id, 'photo_id' => $photo->id]) }}" class="btn btn-sm btn-danger">Apagar</a>
@@ -173,8 +170,8 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    {!! Form::label('photos', 'Imagens Secundárias:') !!}
-                                    {!! Form::file('photos[]', ['class'=>'form-control', 'multiple' => 'multiple']) !!}
+                                    {!! Form::label('images', 'Imagens Secundárias:') !!}
+                                    {!! Form::file('images[]', ['class'=>'form-control', 'multiple' => 'multiple']) !!}
                                 </div>
                             </div>
                         </div>

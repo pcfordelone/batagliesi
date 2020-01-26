@@ -68,7 +68,6 @@
                                     {!! Form::select('blog_category_id', $categories, null, [
                                             'class'=>'form-control',
                                             'style' => "width:100%;",
-                                            'data-search' => 'true',
                                             'required'
                                         ])
                                     !!}

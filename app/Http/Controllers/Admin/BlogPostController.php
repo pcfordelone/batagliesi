@@ -107,4 +107,11 @@ class BlogPostController extends Controller
 
         return redirect()->route('admin.blog.posts.index');
     }
+
+    public function rm_photo($model_id, $photo_id)
+    {
+        $this->service->rm_photo($photo_id);
+
+        return redirect()->route('admin.blog.posts.edit', ['id' => $model_id]);
+    }
 }

@@ -46,7 +46,7 @@ class BlogPostServiceAdm implements BlogPostService
                         'title'         => $entity->name,
                         'alt'           => $entity->name,
                         'url'           => $img,
-                        'blog_post_id'  => $entity->id
+                        'blog_post_id'    => $entity->id
                     ];
 
                     $this->blog_post_image_repository->create($img_data);
@@ -202,6 +202,18 @@ class BlogPostServiceAdm implements BlogPostService
         $by = array('a', 'a', 'a', 'a', 'a', 'e', 'e', 'e', 'e', 'i', 'i', 'i', 'o', 'o', 'o', 'o', 'o', 'u', 'u', 'u', 'u', 'A', 'A', 'E', 'I', 'O', 'U', 'n', 'n', 'c', 'C', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_');
 
         return (strtolower(str_replace($what, $by, $string)));
+    }
+
+    public function rm_photo($photo_id)
+    {
+        $photo = $this->blog_post_image_repository->find($photo_id);
+
+        Storage::disk('public_blog')->delete($photo->url);
+        $this->blog_post_image_repository->delete($photo_id);
+
+        Session::flash('warning', 'Foto excluída com sucesso.');
+
+        return true;
     }
 
 }
