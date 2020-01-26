@@ -98,7 +98,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     {!! Form::label('default_img', 'Imagem Principal:') !!}
-                                    {!! Form::file('default_img', ['class'=>'form-control'])
+                                    {!! Form::file('default_img', ['class'=>'form-control', 'required'])
                                     !!}
                                 </div>
                             </div>

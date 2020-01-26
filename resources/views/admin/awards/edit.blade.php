@@ -123,7 +123,7 @@
                                 <div class="form-group">
                                     {!! Form::label('default_img', 'Cadastrar nova Imagem Principal:') !!}
                                     {!! Form::file('default_img', [
-                                        'class'=>'form-control',
+                                        'class'=>'form-control', 'required'
                                         ])
                                     !!}
                                 </div>
