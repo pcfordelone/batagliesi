@@ -2,6 +2,7 @@
 
 namespace FRD\Http\Controllers\Site;
 
+use FRD\Interfaces\AwardRepository;
 use FRD\Interfaces\BlogPostRepository;
 use FRD\Interfaces\HomeBannerRepository;
 use FRD\Interfaces\ProjectRepository;
@@ -34,9 +35,11 @@ class MainController extends Controller
         return view('site.about');
     }
 
-    public function awards()
+    public function awards(AwardRepository $awardRepository)
     {
-        return view('site.awards');
+        $data = $awardRepository->findWhere(['status' => 1])->all();
+
+        return view('site.awards', compact('data'));
     }
 
     public function projects_index(ProjectRepository $projectRepository)

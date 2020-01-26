@@ -10,24 +10,25 @@
     <div class="ml-4 mr-4 mt-4 pt-2">
         <div class="sort-destination-loader sort-destination-loader-showing">
             <div class="row portfolio-list sort-destination" data-sort-id="portfolio">
-				@for($i = 1; $i < 8; $i++)
-					<div class="col-md-6 col-lg-1-5 isotope-item general">
-						<div class="portfolio-item">
-							<a class="img-thumbnail img-thumbnail-no-borders d-block img-thumbnail-hover-icon lightbox" href="/images/award{{ $i }}.jpg" data-plugin-options="{'type':'image'}">
+                @foreach($data as $item)
+                    <div class="col-md-6 col-lg-1-5 isotope-item general">
+                        <div class="portfolio-item">
+                            <a class="img-thumbnail img-thumbnail-no-borders d-block img-thumbnail-hover-icon lightbox" href="/uploads/awards/{{ $item->default_img }}" data-plugin-options="{'type':'image'}">
 							<span class="thumb-info thumb-info-centered-info thumb-info-no-borders border-radius-0 m-0">
 								<span class="thumb-info-wrapper border-radius-0">
 
-									<img src="/images/award{{ $i }}.jpg" class="img-fluid border-radius-0" alt="">
+									<img src="/uploads/awards/{{ $item->default_img }}" class="img-fluid border-radius-0" alt="">
 
 									<span class="thumb-info-action">
 										<span class="thumb-info-action-icon bg-dark opacity-8"><i class="fas fa-plus"></i></span>
 									</span>
 								</span>
 							</span>
-							</a>
-						</div>
-					</div>
-				@endfor
+                            </a>
+                        </div>
+                    </div>
+                @endforeach
+				
             </div>
         </div>
 
